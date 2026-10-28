@@ -19,5 +19,4 @@ La depuración final se reproduce con `scripts/cierre_noirpress.py` y conserva s
 salidas en `resultados_noirpress/cierre/`. Los nueve métodos se recalcularon sobre
 esa base en `resultados_noirpress/evaluacion_final/`.
 
-`Plan de Tesis UGR - Final corregido.docx` se conserva como antecedente institucional.
-El documento vigente es `Tesina Noirpress - version final.pdf`, en la carpeta raíz.
+Los comandos de reproducción y verificación están documentados en el README de la raíz del repositorio.

@@ -1,8 +1,8 @@
-# Tesina Noirpress
+# Noirpress: pronóstico de demanda y reposición
 
-Respaldo del trabajo final **Pronóstico de demanda y reposición en una microimportadora local. El caso de Noirpress**, de Jose Pasini y Mariano Martín. Octubre de 2026.
+Material metodológico del trabajo final **Pronóstico de demanda y reposición en una microimportadora local. El caso de Noirpress**, de Jose Pasini y Mariano Martín. Octubre de 2026.
 
-El documento de entrega es [Tesina Noirpress - version final.pdf](Tesina%20Noirpress%20-%20version%20final.pdf), de 30 páginas.
+El repositorio reúne los datos, el código y los resultados de una evaluación retrospectiva de nueve métodos de pronóstico, con horizontes de uno y 30 días, y seis escenarios de reposición.
 
 ## Contenido
 
@@ -13,9 +13,6 @@ El documento de entrega es [Tesina Noirpress - version final.pdf](Tesina%20Noirp
 | `scripts/` | Procesamiento, comparación de pronósticos y generación de figuras. |
 | `resultados_noirpress/cierre/` | Órdenes retenidas y excluidas, serie diaria y criterios de depuración. |
 | `resultados_noirpress/evaluacion_final/` | Predicciones guardadas, métricas, escenarios de inventario y figuras. |
-| `documento/` | Texto, tablas, bibliografía, correcciones, composición y verificaciones. |
-
-Se excluyen las versiones anteriores del PDF, la guía de defensa anterior, el plan previo, las cachés, los entornos y los temporales. Los archivos de trabajo locales permanecen en la computadora.
 
 ## Verificar el respaldo sin ejecutar modelos
 
@@ -24,20 +21,10 @@ Desde la raíz del repositorio, con Python 3.12:
 ```powershell
 python -m venv .venv
 .venv/Scripts/python.exe -m pip install -r requirements-respaldo.txt
-.venv/Scripts/python.exe documento/verificar_consistencia_ugr.py
+.venv/Scripts/python.exe scripts/verificar_resultados.py
 ```
 
-La verificación contrasta las huellas SHA-256, las planillas originales, la depuración, las métricas recalculadas a partir de predicciones guardadas, las tablas y seis escenarios de inventario. La base final contiene 391 pedidos, 405 unidades estimadas y 179 días. No necesita descargar TimesFM ni volver a ejecutar los modelos.
-
-## Reconstruir el PDF
-
-```powershell
-.venv/Scripts/python.exe documento/adaptar_plantilla_ugr.py
-```
-
-La composición utiliza las fuentes Arial, Georgia y Segoe UI instaladas en Windows, en `C:/Windows/Fonts`. El comando reemplaza el PDF de entrega con una nueva composición del texto y los resultados guardados. No se distribuyen las fuentes tipográficas.
-
-El texto vigente se compone de `texto_definitivo.txt`, `revisiones_redaccion_ugr.json` y `correcciones_consistencia_ugr.json`. No editar únicamente `texto_plantilla_ugr.txt`: se regenera. `armar_definitiva.py` y `build_definitiva.py` son etapas anteriores; el comando de entrega es `adaptar_plantilla_ugr.py`.
+La verificación contrasta las huellas SHA-256, las planillas originales, la depuración, las métricas recalculadas a partir de predicciones guardadas y seis escenarios de inventario. La base final contiene 391 pedidos, 405 unidades estimadas y 179 días. No necesita descargar TimesFM ni volver a ejecutar los modelos. Los comandos indicados se ejecutan en Windows con Python 3.12.
 
 ## Recalcular el análisis
 
@@ -59,6 +46,4 @@ Este repositorio es público y contiene importes comerciales, costos e identific
 
 Los resultados son retrospectivos: las unidades vendidas se estiman a partir de importes, el stock inicial de 98 unidades es supuesto y los escenarios de reposición son hipotéticos. No demuestran una reducción de quiebres reales. Los stocks de 50 y 60 unidades pertenecen a las simulaciones. El escenario completo contiene 29 días antes y 31 días desde la recepción.
 
-La revisión bibliográfica se conserva en `documento/Revision de fuentes y citas - 2026-10-28.txt`; detalla qué se cotejó y qué quedó sin acceso al texto completo. El ejemplo de formato UGR no sustituye un reglamento institucional.
-
-No se concede una licencia abierta sobre los datos comerciales, el documento ni las marcas y recursos de terceros incluidos.
+No se concede una licencia abierta sobre los datos comerciales ni los recursos de terceros incluidos.

@@ -5,16 +5,13 @@
 !/README.md
 !/requirements.txt
 !/requirements-respaldo.txt
-!/Tesina Noirpress - version final.pdf
 !/Ordenes_Noirpress_limpio.xlsx
 !/scripts/
-!/documento/
 !/fuentes/
 !/resultados_noirpress/
 /fuentes/*
 !/fuentes/*.xlsx
 !/fuentes/LEEME.md
-/documento/guia_defensa.py
 /resultados_noirpress/*
 !/resultados_noirpress/cierre/
 !/resultados_noirpress/evaluacion_final/
