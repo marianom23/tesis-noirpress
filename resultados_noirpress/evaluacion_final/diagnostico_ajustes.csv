@@ -1,0 +1,440 @@
+﻿etapa,origen,modelo,convergio,advertencias,segundos
+validacion,2026-03-13,M1 histórico,True,,0.0003355999979248736
+validacion,2026-03-13,Holt-Winters,True,,0.07895250000001397
+validacion,2026-03-13,SARIMAX,True,,0.19999570000072708
+validacion,2026-03-13,TimesFM 3.0,True,zero-shot; revisión fija; caché local,1.0300002031726763e-05
+validacion,2026-03-14,M1 histórico,True,,0.00030340000012074597
+validacion,2026-03-14,Holt-Winters,True,,0.07660399999804213
+validacion,2026-03-14,SARIMAX,True,,0.18192690000068978
+validacion,2026-03-14,TimesFM 3.0,True,zero-shot; revisión fija; caché local,4.900000931229442e-06
+validacion,2026-03-15,M1 histórico,True,,0.00020700000095530413
+validacion,2026-03-15,Holt-Winters,True,,0.056573100002424326
+validacion,2026-03-15,SARIMAX,True,,0.2486903999997594
+validacion,2026-03-15,TimesFM 3.0,True,zero-shot; revisión fija; caché local,5.300000339047983e-06
+validacion,2026-03-16,M1 histórico,True,,0.00021180000112508424
+validacion,2026-03-16,Holt-Winters,True,,0.049276500001724344
+validacion,2026-03-16,SARIMAX,True,,0.17409240000051796
+validacion,2026-03-16,TimesFM 3.0,True,zero-shot; revisión fija; caché local,4.999998054699972e-06
+validacion,2026-03-17,M1 histórico,True,,0.0002320000021427404
+validacion,2026-03-17,Holt-Winters,True,,0.06519959999786806
+validacion,2026-03-17,SARIMAX,True,,0.15095769999970798
+validacion,2026-03-17,TimesFM 3.0,True,zero-shot; revisión fija; caché local,4.5000015234109014e-06
+validacion,2026-03-18,M1 histórico,True,,0.00022309999985736795
+validacion,2026-03-18,Holt-Winters,True,,0.058172799999738345
+validacion,2026-03-18,SARIMAX,True,,0.16819659999964642
+validacion,2026-03-18,TimesFM 3.0,True,zero-shot; revisión fija; caché local,4.800000169780105e-06
+validacion,2026-03-19,M1 histórico,True,,0.00022309999985736795
+validacion,2026-03-19,Holt-Winters,True,,0.04904309999983525
+validacion,2026-03-19,SARIMAX,True,,0.156225100003212
+validacion,2026-03-19,TimesFM 3.0,True,zero-shot; revisión fija; caché local,4.800000169780105e-06
+validacion,2026-03-20,M1 histórico,True,,0.00019360000078449957
+validacion,2026-03-20,Holt-Winters,True,,0.05010020000190707
+validacion,2026-03-20,SARIMAX,True,,0.15748769999845535
+validacion,2026-03-20,TimesFM 3.0,True,zero-shot; revisión fija; caché local,4.6000022848602384e-06
+validacion,2026-03-21,M1 histórico,True,,0.00018959999943035655
+validacion,2026-03-21,Holt-Winters,True,,0.06497719999970286
+validacion,2026-03-21,SARIMAX,True,,0.15262920000168378
+validacion,2026-03-21,TimesFM 3.0,True,zero-shot; revisión fija; caché local,4.5000015234109014e-06
+validacion,2026-03-22,M1 histórico,True,,0.0002520000016374979
+validacion,2026-03-22,Holt-Winters,True,,0.06775599999673432
+validacion,2026-03-22,SARIMAX,True,,0.21032750000085798
+validacion,2026-03-22,TimesFM 3.0,True,zero-shot; revisión fija; caché local,4.999998054699972e-06
+validacion,2026-03-23,M1 histórico,True,,0.00022499999977299012
+validacion,2026-03-23,Holt-Winters,True,,0.06096130000150879
+validacion,2026-03-23,SARIMAX,True,,0.16081680000206688
+validacion,2026-03-23,TimesFM 3.0,True,zero-shot; revisión fija; caché local,4.7000030463095754e-06
+validacion,2026-03-24,M1 histórico,True,,0.00022950000129640102
+validacion,2026-03-24,Holt-Winters,True,,0.07978400000138208
+validacion,2026-03-24,SARIMAX,True,,0.18560799999977462
+validacion,2026-03-24,TimesFM 3.0,True,zero-shot; revisión fija; caché local,4.699999408330768e-06
+validacion,2026-03-25,M1 histórico,True,,0.00020009999934700318
+validacion,2026-03-25,Holt-Winters,True,,0.05955489999905694
+validacion,2026-03-25,SARIMAX,True,,0.17412510000212933
+validacion,2026-03-25,TimesFM 3.0,True,zero-shot; revisión fija; caché local,4.7000030463095754e-06
+validacion,2026-03-26,M1 histórico,True,,0.00020190000213915482
+validacion,2026-03-26,Holt-Winters,True,,0.04626769999958924
+validacion,2026-03-26,SARIMAX,True,,0.17185809999864432
+validacion,2026-03-26,TimesFM 3.0,True,zero-shot; revisión fija; caché local,7.700000423938036e-06
+validacion,2026-03-27,M1 histórico,True,,0.00019749999773921445
+validacion,2026-03-27,Holt-Winters,True,,0.045066399998177076
+validacion,2026-03-27,SARIMAX,True,,0.16877840000233846
+validacion,2026-03-27,TimesFM 3.0,True,zero-shot; revisión fija; caché local,4.800000169780105e-06
+validacion,2026-03-28,M1 histórico,True,,0.00019830000019283034
+validacion,2026-03-28,Holt-Winters,True,,0.07129060000079335
+validacion,2026-03-28,SARIMAX,True,,0.19184880000102567
+validacion,2026-03-28,TimesFM 3.0,True,zero-shot; revisión fija; caché local,1.089999932446517e-05
+validacion,2026-03-29,M1 histórico,True,,0.00023239999791258015
+validacion,2026-03-29,Holt-Winters,True,,0.07671420000042417
+validacion,2026-03-29,SARIMAX,True,,0.20289079999929527
+validacion,2026-03-29,TimesFM 3.0,True,zero-shot; revisión fija; caché local,5.099998816149309e-06
+validacion,2026-03-30,M1 histórico,True,,0.00020769999900949188
+validacion,2026-03-30,Holt-Winters,True,,0.06379910000032396
+validacion,2026-03-30,SARIMAX,True,,0.176015400000324
+validacion,2026-03-30,TimesFM 3.0,True,zero-shot; revisión fija; caché local,4.5000015234109014e-06
+validacion,2026-03-31,M1 histórico,True,,0.0002609000002848916
+validacion,2026-03-31,Holt-Winters,True,,0.05761960000018007
+validacion,2026-03-31,SARIMAX,True,,0.18245279999973718
+validacion,2026-03-31,TimesFM 3.0,True,zero-shot; revisión fija; caché local,4.599998646881431e-06
+validacion,2026-04-01,M1 histórico,True,,0.0002029999996011611
+validacion,2026-04-01,Holt-Winters,True,,0.059956299999612384
+validacion,2026-04-01,SARIMAX,True,,0.17414780000035535
+validacion,2026-04-01,TimesFM 3.0,True,zero-shot; revisión fija; caché local,4.800000169780105e-06
+validacion,2026-04-02,M1 histórico,True,,0.00023779999901307747
+validacion,2026-04-02,Holt-Winters,True,,0.07957529999839608
+validacion,2026-04-02,SARIMAX,True,,0.18215040000359295
+validacion,2026-04-02,TimesFM 3.0,True,zero-shot; revisión fija; caché local,4.5000015234109014e-06
+validacion,2026-04-03,M1 histórico,True,,0.00024620000112918206
+validacion,2026-04-03,Holt-Winters,True,,0.050364600003376836
+validacion,2026-04-03,SARIMAX,True,,0.21420769999895128
+validacion,2026-04-03,TimesFM 3.0,True,zero-shot; revisión fija; caché local,4.900000931229442e-06
+validacion,2026-04-04,M1 histórico,True,,0.000229199999012053
+validacion,2026-04-04,Holt-Winters,True,,0.06262199999764562
+validacion,2026-04-04,SARIMAX,True,,0.28193259999898146
+validacion,2026-04-04,TimesFM 3.0,True,zero-shot; revisión fija; caché local,4.5000015234109014e-06
+validacion,2026-04-05,M1 histórico,True,,0.00022639999951934442
+validacion,2026-04-05,Holt-Winters,True,,0.060955400000239024
+validacion,2026-04-05,SARIMAX,True,,0.1996220999972138
+validacion,2026-04-05,TimesFM 3.0,True,zero-shot; revisión fija; caché local,4.6000022848602384e-06
+validacion,2026-04-06,M1 histórico,True,,0.0002378999997745268
+validacion,2026-04-06,Holt-Winters,True,,0.08641639999768813
+validacion,2026-04-06,SARIMAX,True,,0.2270256999981939
+validacion,2026-04-06,TimesFM 3.0,True,zero-shot; revisión fija; caché local,4.800000169780105e-06
+validacion,2026-04-07,M1 histórico,True,,0.00025779999850783497
+validacion,2026-04-07,Holt-Winters,True,,0.06322150000050897
+validacion,2026-04-07,SARIMAX,True,,0.2269778000008955
+validacion,2026-04-07,TimesFM 3.0,True,zero-shot; revisión fija; caché local,4.6000022848602384e-06
+validacion,2026-04-08,M1 histórico,True,,0.00019520000205375254
+validacion,2026-04-08,Holt-Winters,True,,0.06704960000206484
+validacion,2026-04-08,SARIMAX,True,,0.24680259999877308
+validacion,2026-04-08,TimesFM 3.0,True,zero-shot; revisión fija; caché local,4.599998646881431e-06
+validacion,2026-04-09,M1 histórico,True,,0.0001950999976543244
+validacion,2026-04-09,Holt-Winters,True,,0.056459400002495386
+validacion,2026-04-09,SARIMAX,True,,0.22588659999746596
+validacion,2026-04-09,TimesFM 3.0,True,zero-shot; revisión fija; caché local,4.399997123982757e-06
+validacion,2026-04-10,M1 histórico,True,,0.00022990000070421956
+validacion,2026-04-10,Holt-Winters,True,,0.06718440000258852
+validacion,2026-04-10,SARIMAX,True,,0.23366299999906914
+validacion,2026-04-10,TimesFM 3.0,True,zero-shot; revisión fija; caché local,4.599998646881431e-06
+validacion,2026-04-11,M1 histórico,True,,0.000228899996727705
+validacion,2026-04-11,Holt-Winters,True,,0.06865199999811011
+validacion,2026-04-11,SARIMAX,True,,0.2096702999988338
+validacion,2026-04-11,TimesFM 3.0,True,zero-shot; revisión fija; caché local,4.6000022848602384e-06
+validacion,2026-04-12,M1 histórico,True,,0.00023780000265105627
+validacion,2026-04-12,Holt-Winters,True,,0.06406439999773283
+validacion,2026-04-12,SARIMAX,True,,0.20980469999994966
+validacion,2026-04-12,TimesFM 3.0,True,zero-shot; revisión fija; caché local,4.599998646881431e-06
+validacion,2026-04-13,M1 histórico,True,,0.00020420000146259554
+validacion,2026-04-13,Holt-Winters,True,,0.06487700000070618
+validacion,2026-04-13,SARIMAX,True,,0.18888719999813475
+validacion,2026-04-13,TimesFM 3.0,True,zero-shot; revisión fija; caché local,4.599998646881431e-06
+validacion,2026-04-14,M1 histórico,True,,0.00019550000070012175
+validacion,2026-04-14,Holt-Winters,True,,0.06864439999844762
+validacion,2026-04-14,SARIMAX,True,,0.20053329999791458
+validacion,2026-04-14,TimesFM 3.0,True,zero-shot; revisión fija; caché local,4.5000015234109014e-06
+validacion,2026-04-15,M1 histórico,True,,0.00020139999833190814
+validacion,2026-04-15,Holt-Winters,True,,0.04702270000052522
+validacion,2026-04-15,SARIMAX,True,,0.2544252999978198
+validacion,2026-04-15,TimesFM 3.0,True,zero-shot; revisión fija; caché local,4.800000169780105e-06
+validacion,2026-04-16,M1 histórico,True,,0.00021180000112508424
+validacion,2026-04-16,Holt-Winters,True,,0.06658279999828665
+validacion,2026-04-16,SARIMAX,True,,0.20946270000058576
+validacion,2026-04-16,TimesFM 3.0,True,zero-shot; revisión fija; caché local,4.699999408330768e-06
+validacion,2026-04-17,M1 histórico,True,,0.0001961999987543095
+validacion,2026-04-17,Holt-Winters,True,,0.059096900000440655
+validacion,2026-04-17,SARIMAX,True,,0.25338449999981094
+validacion,2026-04-17,TimesFM 3.0,True,zero-shot; revisión fija; caché local,4.800000169780105e-06
+validacion,2026-04-18,M1 histórico,True,,0.00020060000315424986
+validacion,2026-04-18,Holt-Winters,True,,0.06070499999987078
+validacion,2026-04-18,SARIMAX,True,,0.2312593000024208
+validacion,2026-04-18,TimesFM 3.0,True,zero-shot; revisión fija; caché local,4.699999408330768e-06
+validacion,2026-04-19,M1 histórico,True,,0.00023700000019744039
+validacion,2026-04-19,Holt-Winters,True,,0.06759280000187573
+validacion,2026-04-19,SARIMAX,True,,0.21070659999895724
+validacion,2026-04-19,TimesFM 3.0,True,zero-shot; revisión fija; caché local,4.699999408330768e-06
+validacion,2026-04-20,M1 histórico,True,,0.00019070000053034164
+validacion,2026-04-20,Holt-Winters,True,,0.05677340000329423
+validacion,2026-04-20,SARIMAX,True,,0.2211115999998583
+validacion,2026-04-20,TimesFM 3.0,True,zero-shot; revisión fija; caché local,4.900000931229442e-06
+validacion,2026-04-21,M1 histórico,True,,0.0001999000014620833
+validacion,2026-04-21,Holt-Winters,True,,0.06944529999964288
+validacion,2026-04-21,SARIMAX,True,,0.21634149999954388
+validacion,2026-04-21,TimesFM 3.0,True,zero-shot; revisión fija; caché local,4.900000931229442e-06
+validacion,2026-04-22,M1 histórico,True,,0.00019629999951575883
+validacion,2026-04-22,Holt-Winters,True,,0.06443620000209194
+validacion,2026-04-22,SARIMAX,True,,0.24383030000171857
+validacion,2026-04-22,TimesFM 3.0,True,zero-shot; revisión fija; caché local,5.000001692678779e-06
+validacion,2026-04-23,M1 histórico,True,,0.0002170999978261534
+validacion,2026-04-23,Holt-Winters,True,,0.06084929999997257
+validacion,2026-04-23,SARIMAX,True,,0.23383670000112033
+validacion,2026-04-23,TimesFM 3.0,True,zero-shot; revisión fija; caché local,4.400000761961564e-06
+validacion,2026-04-24,M1 histórico,True,,0.0002220999995188322
+validacion,2026-04-24,Holt-Winters,True,,0.06342450000011013
+validacion,2026-04-24,SARIMAX,True,,0.26449180000054184
+validacion,2026-04-24,TimesFM 3.0,True,zero-shot; revisión fija; caché local,4.599998646881431e-06
+validacion,2026-04-25,M1 histórico,True,,0.00019260000044596381
+validacion,2026-04-25,Holt-Winters,True,,0.05524620000142022
+validacion,2026-04-25,SARIMAX,True,,0.26729229999909876
+validacion,2026-04-25,TimesFM 3.0,True,zero-shot; revisión fija; caché local,4.499997885432094e-06
+validacion,2026-04-26,M1 histórico,True,,0.0001885999990918208
+validacion,2026-04-26,Holt-Winters,True,,0.058455400001548696
+validacion,2026-04-26,SARIMAX,True,,0.2361230999995314
+validacion,2026-04-26,TimesFM 3.0,True,zero-shot; revisión fija; caché local,4.800000169780105e-06
+validacion,2026-04-27,M1 histórico,True,,0.000192599996807985
+validacion,2026-04-27,Holt-Winters,True,,0.057250600002589636
+validacion,2026-04-27,SARIMAX,True,,0.2301571000025433
+validacion,2026-04-27,TimesFM 3.0,True,zero-shot; revisión fija; caché local,4.7000030463095754e-06
+validacion,2026-04-28,M1 histórico,True,,0.00021940000078757294
+validacion,2026-04-28,Holt-Winters,True,,0.05518379999921308
+validacion,2026-04-28,SARIMAX,True,,0.2619830000003276
+validacion,2026-04-28,TimesFM 3.0,True,zero-shot; revisión fija; caché local,4.900000931229442e-06
+validacion,2026-04-29,M1 histórico,True,,0.00020790000053239055
+validacion,2026-04-29,Holt-Winters,True,,0.0707648000025074
+validacion,2026-04-29,SARIMAX,True,,0.2406029000012495
+validacion,2026-04-29,TimesFM 3.0,True,zero-shot; revisión fija; caché local,4.699999408330768e-06
+validacion,2026-04-30,M1 histórico,True,,0.00018840000120690092
+validacion,2026-04-30,Holt-Winters,True,,0.062014999999519205
+validacion,2026-04-30,SARIMAX,True,,0.2943674000016472
+validacion,2026-04-30,TimesFM 3.0,True,zero-shot; revisión fija; caché local,4.5000015234109014e-06
+validacion,2026-05-01,M1 histórico,True,,0.0001823999991756864
+validacion,2026-05-01,Holt-Winters,True,,0.07312480000109645
+validacion,2026-05-01,SARIMAX,True,,0.21702319999894826
+validacion,2026-05-01,TimesFM 3.0,True,zero-shot; revisión fija; caché local,5.299996701069176e-06
+validacion,2026-05-02,M1 histórico,True,,0.00020569999833242036
+validacion,2026-05-02,Holt-Winters,True,,0.07598130000042147
+validacion,2026-05-02,SARIMAX,True,,0.28993310000078054
+validacion,2026-05-02,TimesFM 3.0,True,zero-shot; revisión fija; caché local,4.800000169780105e-06
+validacion,2026-05-03,M1 histórico,True,,0.00018619999900693074
+validacion,2026-05-03,Holt-Winters,True,,0.06973759999891627
+validacion,2026-05-03,SARIMAX,True,,0.23644810000041616
+validacion,2026-05-03,TimesFM 3.0,True,zero-shot; revisión fija; caché local,4.800000169780105e-06
+validacion,2026-05-04,M1 histórico,True,,0.00027570000020205043
+validacion,2026-05-04,Holt-Winters,True,,0.08320319999984349
+validacion,2026-05-04,SARIMAX,True,,0.258352199998626
+validacion,2026-05-04,TimesFM 3.0,True,zero-shot; revisión fija; caché local,4.900000931229442e-06
+validacion,2026-05-05,M1 histórico,True,,0.00022389999867300503
+validacion,2026-05-05,Holt-Winters,True,,0.06765090000044438
+validacion,2026-05-05,SARIMAX,True,,0.251421199998731
+validacion,2026-05-05,TimesFM 3.0,True,zero-shot; revisión fija; caché local,4.900000931229442e-06
+validacion,2026-05-06,M1 histórico,True,,0.0002134000023943372
+validacion,2026-05-06,Holt-Winters,True,,0.07128989999910118
+validacion,2026-05-06,SARIMAX,True,,0.2223794999990787
+validacion,2026-05-06,TimesFM 3.0,True,zero-shot; revisión fija; caché local,6.000002031214535e-06
+prueba,2026-05-07,M1 histórico,True,,0.0002144999998563435
+prueba,2026-05-07,Holt-Winters,True,,0.08242470000186586
+prueba,2026-05-07,SARIMAX,True,,0.24889169999732985
+prueba,2026-05-07,TimesFM 3.0,True,zero-shot; revisión fija; caché local,4.800000169780105e-06
+prueba,2026-05-08,M1 histórico,True,,0.00022610000087297522
+prueba,2026-05-08,Holt-Winters,True,,0.0688135999989754
+prueba,2026-05-08,SARIMAX,True,,0.2534176999979536
+prueba,2026-05-08,TimesFM 3.0,True,zero-shot; revisión fija; caché local,4.699999408330768e-06
+prueba,2026-05-09,M1 histórico,True,,0.00019039999824599363
+prueba,2026-05-09,Holt-Winters,True,,0.061838000001444016
+prueba,2026-05-09,SARIMAX,True,,0.2796812999986287
+prueba,2026-05-09,TimesFM 3.0,True,zero-shot; revisión fija; caché local,4.599998646881431e-06
+prueba,2026-05-10,M1 histórico,True,,0.00022839999655843712
+prueba,2026-05-10,Holt-Winters,True,,0.06651589999819407
+prueba,2026-05-10,SARIMAX,True,,0.3060327999992296
+prueba,2026-05-10,TimesFM 3.0,True,zero-shot; revisión fija; caché local,4.499997885432094e-06
+prueba,2026-05-11,M1 histórico,True,,0.00019330000213813037
+prueba,2026-05-11,Holt-Winters,True,,0.06799669999963953
+prueba,2026-05-11,SARIMAX,True,,0.2561204999983602
+prueba,2026-05-11,TimesFM 3.0,True,zero-shot; revisión fija; caché local,4.999998054699972e-06
+prueba,2026-05-12,M1 histórico,True,,0.0001965000010386575
+prueba,2026-05-12,Holt-Winters,True,,0.048495099999854574
+prueba,2026-05-12,SARIMAX,True,,0.19258930000069086
+prueba,2026-05-12,TimesFM 3.0,True,zero-shot; revisión fija; caché local,4.899997293250635e-06
+prueba,2026-05-13,M1 histórico,True,,0.00027240000054007396
+prueba,2026-05-13,Holt-Winters,True,,0.0701656000019284
+prueba,2026-05-13,SARIMAX,True,,0.1398745999977109
+prueba,2026-05-13,TimesFM 3.0,True,zero-shot; revisión fija; caché local,5.100002454128116e-06
+prueba,2026-05-14,M1 histórico,True,,0.00023820000205887482
+prueba,2026-05-14,Holt-Winters,True,,0.07603109999763547
+prueba,2026-05-14,SARIMAX,True,,0.11529100000188919
+prueba,2026-05-14,TimesFM 3.0,True,zero-shot; revisión fija; caché local,5.099998816149309e-06
+prueba,2026-05-15,M1 histórico,True,,0.00028169999859528616
+prueba,2026-05-15,Holt-Winters,True,,0.07098060000134865
+prueba,2026-05-15,SARIMAX,True,,0.11089269999865792
+prueba,2026-05-15,TimesFM 3.0,True,zero-shot; revisión fija; caché local,4.699999408330768e-06
+prueba,2026-05-16,M1 histórico,True,,0.000197899997147033
+prueba,2026-05-16,Holt-Winters,True,,0.0768166999987443
+prueba,2026-05-16,SARIMAX,True,,0.10478240000156802
+prueba,2026-05-16,TimesFM 3.0,True,zero-shot; revisión fija; caché local,4.5000015234109014e-06
+prueba,2026-05-17,M1 histórico,True,,0.0002117000003636349
+prueba,2026-05-17,Holt-Winters,True,,0.07352299999911338
+prueba,2026-05-17,SARIMAX,True,,0.12524770000163699
+prueba,2026-05-17,TimesFM 3.0,True,zero-shot; revisión fija; caché local,8.300001354655251e-06
+prueba,2026-05-18,M1 histórico,True,,0.00021829999968758784
+prueba,2026-05-18,Holt-Winters,True,,0.0739069000010204
+prueba,2026-05-18,SARIMAX,True,,0.10110419999909936
+prueba,2026-05-18,TimesFM 3.0,True,zero-shot; revisión fija; caché local,4.7000030463095754e-06
+prueba,2026-05-19,M1 histórico,True,,0.0002224000018031802
+prueba,2026-05-19,Holt-Winters,True,,0.08081680000032065
+prueba,2026-05-19,SARIMAX,True,,0.11293039999873145
+prueba,2026-05-19,TimesFM 3.0,True,zero-shot; revisión fija; caché local,4.699999408330768e-06
+prueba,2026-05-20,M1 histórico,True,,0.0002868000010494143
+prueba,2026-05-20,Holt-Winters,True,,0.0707356000020809
+prueba,2026-05-20,SARIMAX,True,,0.10883190000095055
+prueba,2026-05-20,TimesFM 3.0,True,zero-shot; revisión fija; caché local,4.900000931229442e-06
+prueba,2026-05-21,M1 histórico,True,,0.0002683000020624604
+prueba,2026-05-21,Holt-Winters,True,,0.0668294999995851
+prueba,2026-05-21,SARIMAX,True,,0.10118270000020857
+prueba,2026-05-21,TimesFM 3.0,True,zero-shot; revisión fija; caché local,5.099998816149309e-06
+prueba,2026-05-22,M1 histórico,True,,0.00019439999960013665
+prueba,2026-05-22,Holt-Winters,True,,0.05707960000290768
+prueba,2026-05-22,SARIMAX,True,,0.11760990000038873
+prueba,2026-05-22,TimesFM 3.0,True,zero-shot; revisión fija; caché local,8.899998647393659e-06
+prueba,2026-05-23,M1 histórico,True,,0.00023530000180471689
+prueba,2026-05-23,Holt-Winters,True,,0.07006620000174735
+prueba,2026-05-23,SARIMAX,True,,0.09889399999883608
+prueba,2026-05-23,TimesFM 3.0,True,zero-shot; revisión fija; caché local,4.999998054699972e-06
+prueba,2026-05-24,M1 histórico,True,,0.00019630000315373763
+prueba,2026-05-24,Holt-Winters,True,,0.0571142000007967
+prueba,2026-05-24,SARIMAX,True,,0.09821190000002389
+prueba,2026-05-24,TimesFM 3.0,True,zero-shot; revisión fija; caché local,4.699999408330768e-06
+prueba,2026-05-25,M1 histórico,True,,0.00020189999850117601
+prueba,2026-05-25,Holt-Winters,True,,0.05898019999949611
+prueba,2026-05-25,SARIMAX,True,,0.09008449999964796
+prueba,2026-05-25,TimesFM 3.0,True,zero-shot; revisión fija; caché local,4.5000015234109014e-06
+prueba,2026-05-26,M1 histórico,True,,0.0001953999999386724
+prueba,2026-05-26,Holt-Winters,True,,0.0584022000002733
+prueba,2026-05-26,SARIMAX,True,,0.11064350000015111
+prueba,2026-05-26,TimesFM 3.0,True,zero-shot; revisión fija; caché local,4.800000169780105e-06
+prueba,2026-05-27,M1 histórico,True,,0.0001999000014620833
+prueba,2026-05-27,Holt-Winters,True,,0.05857069999910891
+prueba,2026-05-27,SARIMAX,True,,0.10316489999968326
+prueba,2026-05-27,TimesFM 3.0,True,zero-shot; revisión fija; caché local,5.300000339047983e-06
+prueba,2026-05-28,M1 histórico,True,,0.00020500000027823262
+prueba,2026-05-28,Holt-Winters,True,,0.06746779999957653
+prueba,2026-05-28,SARIMAX,True,,0.11086240000076941
+prueba,2026-05-28,TimesFM 3.0,True,zero-shot; revisión fija; caché local,4.599998646881431e-06
+prueba,2026-05-29,M1 histórico,True,,0.00026529999740887433
+prueba,2026-05-29,Holt-Winters,True,,0.06912310000188882
+prueba,2026-05-29,SARIMAX,True,,0.11667390000002342
+prueba,2026-05-29,TimesFM 3.0,True,zero-shot; revisión fija; caché local,5.000001692678779e-06
+prueba,2026-05-30,M1 histórico,True,,0.00020000000222353265
+prueba,2026-05-30,Holt-Winters,True,,0.06378380000023753
+prueba,2026-05-30,SARIMAX,True,,0.11165880000044126
+prueba,2026-05-30,TimesFM 3.0,True,zero-shot; revisión fija; caché local,4.999998054699972e-06
+prueba,2026-05-31,M1 histórico,True,,0.00019109999993816018
+prueba,2026-05-31,Holt-Winters,True,,0.05701770000086981
+prueba,2026-05-31,SARIMAX,True,,0.10832049999953597
+prueba,2026-05-31,TimesFM 3.0,True,zero-shot; revisión fija; caché local,4.599998646881431e-06
+prueba,2026-06-01,M1 histórico,True,,0.00022739999985788018
+prueba,2026-06-01,Holt-Winters,True,,0.07057550000172341
+prueba,2026-06-01,SARIMAX,True,,0.10136740000234568
+prueba,2026-06-01,TimesFM 3.0,True,zero-shot; revisión fija; caché local,5.40000110049732e-06
+prueba,2026-06-02,M1 histórico,True,,0.00021840000044903718
+prueba,2026-06-02,Holt-Winters,True,,0.056425899998430395
+prueba,2026-06-02,SARIMAX,True,,0.10040120000121533
+prueba,2026-06-02,TimesFM 3.0,True,zero-shot; revisión fija; caché local,4.400000761961564e-06
+prueba,2026-06-03,M1 histórico,True,,0.0002007000002777204
+prueba,2026-06-03,Holt-Winters,True,,0.060877700001583435
+prueba,2026-06-03,SARIMAX,True,,0.109246299998631
+prueba,2026-06-03,TimesFM 3.0,True,zero-shot; revisión fija; caché local,4.900000931229442e-06
+prueba,2026-06-04,M1 histórico,True,,0.00019659999816212803
+prueba,2026-06-04,Holt-Winters,True,,0.06148300000131712
+prueba,2026-06-04,SARIMAX,True,,0.10099029999764753
+prueba,2026-06-04,TimesFM 3.0,True,zero-shot; revisión fija; caché local,5.300000339047983e-06
+prueba,2026-06-05,M1 histórico,True,,0.0002480000002833549
+prueba,2026-06-05,Holt-Winters,True,,0.05701770000086981
+prueba,2026-06-05,SARIMAX,True,,0.10451670000111335
+prueba,2026-06-05,TimesFM 3.0,True,zero-shot; revisión fija; caché local,4.599998646881431e-06
+prueba,2026-06-06,M1 histórico,True,,0.00019210000027669594
+prueba,2026-06-06,Holt-Winters,True,,0.06519739999930607
+prueba,2026-06-06,SARIMAX,True,,0.11565790000167908
+prueba,2026-06-06,TimesFM 3.0,True,zero-shot; revisión fija; caché local,4.800000169780105e-06
+prueba,2026-06-07,M1 histórico,True,,0.0002116999967256561
+prueba,2026-06-07,Holt-Winters,True,,0.05810209999981453
+prueba,2026-06-07,SARIMAX,True,,0.10539150000113295
+prueba,2026-06-07,TimesFM 3.0,True,zero-shot; revisión fija; caché local,4.499997885432094e-06
+prueba,2026-06-08,M1 histórico,True,,0.00020900000163237564
+prueba,2026-06-08,Holt-Winters,True,,0.05654759999742964
+prueba,2026-06-08,SARIMAX,True,,0.10633959999904619
+prueba,2026-06-08,TimesFM 3.0,True,zero-shot; revisión fija; caché local,4.499997885432094e-06
+prueba,2026-06-09,M1 histórico,True,,0.00025159999859170057
+prueba,2026-06-09,Holt-Winters,True,,0.07420149999961723
+prueba,2026-06-09,SARIMAX,True,,0.10759779999716557
+prueba,2026-06-09,TimesFM 3.0,True,zero-shot; revisión fija; caché local,4.900000931229442e-06
+prueba,2026-06-10,M1 histórico,True,,0.0001993000005313661
+prueba,2026-06-10,Holt-Winters,True,,0.06004490000123042
+prueba,2026-06-10,SARIMAX,True,,0.11299510000026203
+prueba,2026-06-10,TimesFM 3.0,True,zero-shot; revisión fija; caché local,4.699999408330768e-06
+prueba,2026-06-11,M1 histórico,True,,0.00019889999748556875
+prueba,2026-06-11,Holt-Winters,True,,0.05846920000112732
+prueba,2026-06-11,SARIMAX,True,,0.10051640000165207
+prueba,2026-06-11,TimesFM 3.0,True,zero-shot; revisión fija; caché local,4.900000931229442e-06
+prueba,2026-06-12,M1 histórico,True,,0.00020020000010845251
+prueba,2026-06-12,Holt-Winters,True,,0.059803100000863196
+prueba,2026-06-12,SARIMAX,True,,0.10765929999979562
+prueba,2026-06-12,TimesFM 3.0,True,zero-shot; revisión fija; caché local,4.7000030463095754e-06
+prueba,2026-06-13,M1 histórico,True,,0.00027069999850937165
+prueba,2026-06-13,Holt-Winters,True,,0.05803589999777614
+prueba,2026-06-13,SARIMAX,True,,0.11102639999808162
+prueba,2026-06-13,TimesFM 3.0,True,zero-shot; revisión fija; caché local,4.599998646881431e-06
+prueba,2026-06-14,M1 histórico,True,,0.00026390000130049884
+prueba,2026-06-14,Holt-Winters,True,,0.059024000001954846
+prueba,2026-06-14,SARIMAX,True,,0.11277399999744375
+prueba,2026-06-14,TimesFM 3.0,True,zero-shot; revisión fija; caché local,5.099998816149309e-06
+prueba,2026-06-15,M1 histórico,True,,0.00019919999976991676
+prueba,2026-06-15,Holt-Winters,True,,0.05842020000272896
+prueba,2026-06-15,SARIMAX,True,,0.12304410000069765
+prueba,2026-06-15,TimesFM 3.0,True,zero-shot; revisión fija; caché local,4.900000931229442e-06
+prueba,2026-06-16,M1 histórico,True,,0.000194800002645934
+prueba,2026-06-16,Holt-Winters,True,,0.07804440000109025
+prueba,2026-06-16,SARIMAX,True,,0.1122399999985646
+prueba,2026-06-16,TimesFM 3.0,True,zero-shot; revisión fija; caché local,4.800000169780105e-06
+prueba,2026-06-17,M1 histórico,True,,0.00020249999943189323
+prueba,2026-06-17,Holt-Winters,True,,0.07173779999720864
+prueba,2026-06-17,SARIMAX,True,,0.10924900000100024
+prueba,2026-06-17,TimesFM 3.0,True,zero-shot; revisión fija; caché local,4.499997885432094e-06
+prueba,2026-06-18,M1 histórico,True,,0.00027319999935571104
+prueba,2026-06-18,Holt-Winters,True,,0.07817520000025979
+prueba,2026-06-18,SARIMAX,True,,0.1303392999980133
+prueba,2026-06-18,TimesFM 3.0,True,zero-shot; revisión fija; caché local,1.0300002031726763e-05
+prueba,2026-06-19,M1 histórico,True,,0.00027540000155568123
+prueba,2026-06-19,Holt-Winters,True,,0.07703310000215424
+prueba,2026-06-19,SARIMAX,True,,0.08695589999842923
+prueba,2026-06-19,TimesFM 3.0,True,zero-shot; revisión fija; caché local,4.6000022848602384e-06
+prueba,2026-06-20,M1 histórico,True,,0.0002013000012084376
+prueba,2026-06-20,Holt-Winters,True,,0.07301540000116802
+prueba,2026-06-20,SARIMAX,True,,0.11719489999813959
+prueba,2026-06-20,TimesFM 3.0,True,zero-shot; revisión fija; caché local,4.499997885432094e-06
+prueba,2026-06-21,M1 histórico,True,,0.00021009999909438193
+prueba,2026-06-21,Holt-Winters,True,,0.07744630000161123
+prueba,2026-06-21,SARIMAX,True,,0.11167070000010426
+prueba,2026-06-21,TimesFM 3.0,True,zero-shot; revisión fija; caché local,4.699999408330768e-06
+prueba,2026-06-22,M1 histórico,True,,0.00026499999876250513
+prueba,2026-06-22,Holt-Winters,True,,0.056534600000304636
+prueba,2026-06-22,SARIMAX,True,,0.12310309999884339
+prueba,2026-06-22,TimesFM 3.0,True,zero-shot; revisión fija; caché local,4.800000169780105e-06
+prueba,2026-06-23,M1 histórico,True,,0.00020059999951627105
+prueba,2026-06-23,Holt-Winters,True,,0.060071800002333475
+prueba,2026-06-23,SARIMAX,True,,0.12070020000101067
+prueba,2026-06-23,TimesFM 3.0,True,zero-shot; revisión fija; caché local,4.800000169780105e-06
+prueba,2026-06-24,M1 histórico,True,,0.0002021000000240747
+prueba,2026-06-24,Holt-Winters,True,,0.06378879999829223
+prueba,2026-06-24,SARIMAX,True,,0.11846570000125212
+prueba,2026-06-24,TimesFM 3.0,True,zero-shot; revisión fija; caché local,4.900000931229442e-06
+prueba,2026-06-25,M1 histórico,True,,0.0002117000003636349
+prueba,2026-06-25,Holt-Winters,True,,0.06542949999857228
+prueba,2026-06-25,SARIMAX,True,,0.10843110000132583
+prueba,2026-06-25,TimesFM 3.0,True,zero-shot; revisión fija; caché local,4.900000931229442e-06
+prueba,2026-06-26,M1 histórico,True,,0.00021700000070268288
+prueba,2026-06-26,Holt-Winters,True,,0.06220249999751104
+prueba,2026-06-26,SARIMAX,True,,0.0972951000003377
+prueba,2026-06-26,TimesFM 3.0,True,zero-shot; revisión fija; caché local,4.800000169780105e-06
+prueba,2026-06-27,M1 histórico,True,,0.00020189999850117601
+prueba,2026-06-27,Holt-Winters,True,,0.059302599998773076
+prueba,2026-06-27,SARIMAX,True,,0.10409440000148606
+prueba,2026-06-27,TimesFM 3.0,True,zero-shot; revisión fija; caché local,5.099998816149309e-06
+prueba,2026-06-28,M1 histórico,True,,0.00020539999968605116
+prueba,2026-06-28,Holt-Winters,True,,0.07161220000125468
+prueba,2026-06-28,SARIMAX,True,,0.11830710000140243
+prueba,2026-06-28,TimesFM 3.0,True,zero-shot; revisión fija; caché local,5.599998985417187e-06
+prueba,2026-06-29,M1 histórico,True,,0.00024110000231303275
+prueba,2026-06-29,Holt-Winters,True,,0.08174080000026152
+prueba,2026-06-29,SARIMAX,True,,0.12292270000034478
+prueba,2026-06-29,TimesFM 3.0,True,zero-shot; revisión fija; caché local,7.700000423938036e-06
+futuro,2026-06-30,M1 histórico,True,,
+futuro,2026-06-30,Holt-Winters,True,,
+futuro,2026-06-30,SARIMAX,True,,

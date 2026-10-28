@@ -1,0 +1,260 @@
+{
+  "unidades_estimadas": 405,
+  "pedidos": 391,
+  "dias": 179,
+  "media_diaria": 2.2625698324,
+  "dias_sin_ordenes": 34,
+  "mensuales": [
+    {
+      "mes": "2026-01",
+      "dias": 29,
+      "unidades": 15.0,
+      "pedidos": 15,
+      "dias_sin_pedidos": 17,
+      "media": 0.5172413793,
+      "desvio": 0.737790604,
+      "importe": 2697668.7,
+      "TiendaNube": 12,
+      "Mercado_Libre": 3
+    },
+    {
+      "mes": "2026-02",
+      "dias": 28,
+      "unidades": 57.0,
+      "pedidos": 54,
+      "dias_sin_pedidos": 4,
+      "media": 2.0357142857,
+      "desvio": 1.5511559097,
+      "importe": 9872017.63,
+      "TiendaNube": 18,
+      "Mercado_Libre": 36
+    },
+    {
+      "mes": "2026-03",
+      "dias": 31,
+      "unidades": 72.0,
+      "pedidos": 68,
+      "dias_sin_pedidos": 2,
+      "media": 2.3225806452,
+      "desvio": 1.5575000647,
+      "importe": 12731056.35,
+      "TiendaNube": 23,
+      "Mercado_Libre": 45
+    },
+    {
+      "mes": "2026-04",
+      "dias": 30,
+      "unidades": 65.0,
+      "pedidos": 65,
+      "dias_sin_pedidos": 3,
+      "media": 2.1666666667,
+      "desvio": 1.366680684,
+      "importe": 11675836.78,
+      "TiendaNube": 33,
+      "Mercado_Libre": 32
+    },
+    {
+      "mes": "2026-05",
+      "dias": 31,
+      "unidades": 105.0,
+      "pedidos": 101,
+      "dias_sin_pedidos": 5,
+      "media": 3.3870967742,
+      "desvio": 4.7726821205,
+      "importe": 16989052.04,
+      "TiendaNube": 76,
+      "Mercado_Libre": 25
+    },
+    {
+      "mes": "2026-06",
+      "dias": 30,
+      "unidades": 91.0,
+      "pedidos": 88,
+      "dias_sin_pedidos": 3,
+      "media": 3.0333333333,
+      "desvio": 2.6455340812,
+      "importe": 16449574.25,
+      "TiendaNube": 52,
+      "Mercado_Libre": 36
+    }
+  ],
+  "canales": [
+    {
+      "Origen": "Mercado Libre",
+      "pedidos": 177,
+      "unidades": 179,
+      "importe": 30441887.9,
+      "ultima_fecha": 1781827200000
+    },
+    {
+      "Origen": "TiendaNube",
+      "pedidos": 214,
+      "unidades": 226,
+      "importe": 39973317.85,
+      "ultima_fecha": 1782691200000
+    }
+  ],
+  "eventos": [
+    {
+      "evento": "Fuera de ventanas",
+      "size": 168,
+      "sum": 313.0,
+      "mean": 1.8630952381,
+      "median": 1.0,
+      "std": 1.5278868631
+    },
+    {
+      "evento": "Ventana junio",
+      "size": 4,
+      "sum": 33.0,
+      "mean": 8.25,
+      "median": 8.5,
+      "std": 1.7078251277
+    },
+    {
+      "evento": "Ventana mayo",
+      "size": 7,
+      "sum": 59.0,
+      "mean": 8.4285714286,
+      "median": 4.0,
+      "std": 8.2230801783
+    }
+  ],
+  "maximo_diario": 22.0,
+  "fechas_maximo": [
+    "2026-05-11"
+  ],
+  "inventario": [
+    {
+      "Stock inicial supuesto": 0,
+      "Mínimo contable": -30.0,
+      "Fecha mínimo": "2026-05-25",
+      "Días saldo negativo": 29,
+      "Días saldo cero": 0,
+      "Saldo 30 junio": 15.0
+    },
+    {
+      "Stock inicial supuesto": 25,
+      "Mínimo contable": -5.0,
+      "Fecha mínimo": "2026-05-25",
+      "Días saldo negativo": 3,
+      "Días saldo cero": 0,
+      "Saldo 30 junio": 40.0
+    },
+    {
+      "Stock inicial supuesto": 30,
+      "Mínimo contable": 0.0,
+      "Fecha mínimo": "2026-05-25",
+      "Días saldo negativo": 0,
+      "Días saldo cero": 2,
+      "Saldo 30 junio": 45.0
+    },
+    {
+      "Stock inicial supuesto": 32,
+      "Mínimo contable": 2.0,
+      "Fecha mínimo": "2026-05-25",
+      "Días saldo negativo": 0,
+      "Días saldo cero": 0,
+      "Saldo 30 junio": 47.0
+    },
+    {
+      "Stock inicial supuesto": 50,
+      "Mínimo contable": 20.0,
+      "Fecha mínimo": "2026-05-25",
+      "Días saldo negativo": 0,
+      "Días saldo cero": 0,
+      "Saldo 30 junio": 65.0
+    },
+    {
+      "Stock inicial supuesto": 96,
+      "Mínimo contable": 66.0,
+      "Fecha mínimo": "2026-05-25",
+      "Días saldo negativo": 0,
+      "Días saldo cero": 0,
+      "Saldo 30 junio": 111.0
+    },
+    {
+      "Stock inicial supuesto": 98,
+      "Mínimo contable": 68.0,
+      "Fecha mínimo": "2026-05-25",
+      "Días saldo negativo": 0,
+      "Días saldo cero": 0,
+      "Saldo 30 junio": 113.0
+    }
+  ],
+  "stock_minimo_inicial": 30,
+  "escenarios": [
+    {
+      "Emisión": "2026-04-27",
+      "Llegada": "2026-05-27",
+      "Método": "Media 7 días",
+      "Stock inicial simulado": 50,
+      "Pedido calculado": 130,
+      "Días puntuados": 60,
+      "Faltantes antes llegada": 50.0,
+      "Faltantes después llegada": 0.0,
+      "Stock medio": 52.3166666667,
+      "Atendido_pct": 74.0932642487
+    },
+    {
+      "Emisión": "2026-04-27",
+      "Llegada": "2026-05-27",
+      "Método": "Media 28 días",
+      "Stock inicial simulado": 50,
+      "Pedido calculado": 85,
+      "Días puntuados": 60,
+      "Faltantes antes llegada": 50.0,
+      "Faltantes después llegada": 8.0,
+      "Stock medio": 29.3666666667,
+      "Atendido_pct": 69.9481865285
+    },
+    {
+      "Emisión": "2026-04-27",
+      "Llegada": "2026-05-27",
+      "Método": "Mediana 28 días",
+      "Stock inicial simulado": 50,
+      "Pedido calculado": 70,
+      "Días puntuados": 60,
+      "Faltantes antes llegada": 50.0,
+      "Faltantes después llegada": 23.0,
+      "Stock medio": 23.5833333333,
+      "Atendido_pct": 62.1761658031
+    },
+    {
+      "Emisión": "2026-06-01",
+      "Llegada": "2026-07-01",
+      "Método": "Media 7 días",
+      "Stock inicial simulado": 60,
+      "Pedido calculado": 18,
+      "Días puntuados": 29,
+      "Faltantes antes llegada": 30.0,
+      "Faltantes después llegada": 0.0,
+      "Stock medio": 17.3103448276,
+      "Atendido_pct": 66.6666666667
+    },
+    {
+      "Emisión": "2026-06-01",
+      "Llegada": "2026-07-01",
+      "Método": "Media 28 días",
+      "Stock inicial simulado": 60,
+      "Pedido calculado": 155,
+      "Días puntuados": 29,
+      "Faltantes antes llegada": 30.0,
+      "Faltantes después llegada": 0.0,
+      "Stock medio": 17.3103448276,
+      "Atendido_pct": 66.6666666667
+    },
+    {
+      "Emisión": "2026-06-01",
+      "Llegada": "2026-07-01",
+      "Método": "Mediana 28 días",
+      "Stock inicial simulado": 60,
+      "Pedido calculado": 120,
+      "Días puntuados": 29,
+      "Faltantes antes llegada": 30.0,
+      "Faltantes después llegada": 0.0,
+      "Stock medio": 17.3103448276,
+      "Atendido_pct": 66.6666666667
+    }
+  ]
+}

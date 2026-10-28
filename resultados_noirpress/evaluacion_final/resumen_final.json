@@ -1,0 +1,70 @@
+{
+  "fecha_revision": "2026-10-20",
+  "python": "3.12.8",
+  "paquetes": {
+    "numpy": "2.3.5",
+    "pandas": "3.0.1",
+    "scipy": "1.18.1",
+    "statsmodels": "0.15.0",
+    "timesfm": "3.0.2",
+    "torch": "2.14.0"
+  },
+  "hashes": {
+    "resultados_noirpress\\cierre\\ordenes_cierre.csv": "7c838d8ef6584e2da80f1e5801d90b60375f78aee6607d224b4ad7505233cd1e",
+    "resultados_noirpress\\cierre\\serie_diaria_cierre.csv": "1978d15ab5db4f49a7fb6d5a97ab647af18a3a4f04d9a220392f9d6c32ab06b7",
+    "fuentes\\control_pedidos_ventas_quiebres_noirpress.xlsx": "4c5fe0932cc9d4b8281428da3c75379253ac1b807905448fba92b978f330a080",
+    "scripts\\evaluacion_final_noirpress.py": "4541072d707cf0ec6c6f18496fa5c015a63ad9fa048a6ca40e8c5c27bfc1bf8d",
+    "scripts\\modelos_noirpress_avanzados.py": "409ca0a3a9975ec6c2e2ef0008457147dcaf2ad1fab56d1c39ef8a0a5801f9e4",
+    "scripts\\auditoria_eda_noirpress.py": "06f0e78b6c332338b2a67945ccc8c386c507ee80d7b4d2e6dd70623cb9dc90ea"
+  },
+  "modelo": "google/timesfm-3.0-pytorch",
+  "revision": "43046b85ec22d584a13f8098c2ed39c889e129c2",
+  "device": "cpu",
+  "pesos_solo_cache": true,
+  "licencia_pesos": "timesfm-non-commercial-license-v1.0; uso comercial excluido",
+  "alcance": "Reevaluación retrospectiva de 405 unidades estimadas; partición de prueba previamente conocida; sin nueva prueba prospectiva.",
+  "unidades_estimadas": 405,
+  "pedidos": 391,
+  "dias": 179,
+  "historial": 70,
+  "validacion": 55,
+  "prueba": 54,
+  "ventanas30_validacion": 26,
+  "ventanas30_prueba": 25,
+  "seleccion": {
+    "cuatro_originales": {
+      "1": "TimesFM 3.0",
+      "30": "SARIMAX"
+    },
+    "nueve_exploratorios": {
+      "1": "Mediana 28 días",
+      "30": "Mediana 28 días"
+    }
+  },
+  "modelos_no_convergentes": [],
+  "inventario_inicial_supuesto": 98,
+  "ingresos_periodo": 420,
+  "stock_inicial_minimo_contable": 30,
+  "saldo_minimo": 68.0,
+  "fecha_saldo_minimo": "2026-05-25",
+  "saldo_final": 113.0,
+  "dias_sin_ordenes": 34,
+  "cobertura": {
+    "modelo": "TimesFM 3.0",
+    "n": 54,
+    "cubiertos": 37,
+    "nominal": 0.8,
+    "cobertura_observada": 0.6851851852,
+    "ancho_medio": 5.3870404606
+  },
+  "duracion_segundos": 58.4276726,
+  "limitaciones": [
+    "Cantidades inferidas, no líneas de producto verificadas.",
+    "Stock inicial contable, no conteo físico.",
+    "Lead time fijo de30 días informado, no distribución observada.",
+    "Ceros de calendario bajo supuesto de cobertura.",
+    "Ventanas acumuladas solapadas.",
+    "Cinco referencias añadidas tras conocer el período.",
+    "TimesFM publicado después del período de ventas; uso retrospectivo y licencia no comercial."
+  ]
+}

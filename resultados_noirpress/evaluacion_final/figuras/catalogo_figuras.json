@@ -1,0 +1,74 @@
+[
+  {
+    "number": 1,
+    "basename": "01_punto_reposicion",
+    "titulo": "Punto de reposición y plazo de entrega",
+    "nota": "Ejemplo conceptual con demanda constante de 3 unidades diarias, plazo de 30 días y reserva de 20. No representa el stock observado de Noirpress."
+  },
+  {
+    "number": 2,
+    "basename": "02_evaluacion_temporal",
+    "titulo": "Evaluación con origen móvil",
+    "nota": "Cada origen utiliza solamente observaciones previas. Los errores a 30 días se calculan sobre ventanas completas: 26 en validación y 25 en prueba; las ventanas se superponen."
+  },
+  {
+    "number": 3,
+    "basename": "03_serie_diaria",
+    "titulo": "Serie diaria y evolución del nivel de ventas",
+    "nota": "Base depurada: 391 pedidos, 405 unidades estimadas y 179 días. Sombreado: ventanas analíticas del 11 al 17 de mayo y del 14 al 17 de junio; no acredita causalidad comercial ni duración oficial de los eventos."
+  },
+  {
+    "number": 4,
+    "basename": "04_canales_mensuales",
+    "titulo": "Composición mensual de las ventas por canal",
+    "nota": "Las cantidades se estiman a partir del importe de cada pedido y una referencia de precios calculada con días anteriores. Enero comienza el día 3; la ausencia de pedidos de Mercado Libre después del 19 de junio no demuestra falta de stock."
+  },
+  {
+    "number": 5,
+    "basename": "05_distribucion_concentracion",
+    "titulo": "Distribución y concentración de las ventas diarias",
+    "nota": "El panel derecho ordena los días por volumen, sin respetar la secuencia temporal. Describe concentración, no probabilidad futura de demanda."
+  },
+  {
+    "number": 6,
+    "basename": "06_perfil_semanal",
+    "titulo": "El perfil semanal cambia entre tramos del semestre",
+    "nota": "Promedios descriptivos de la base depurada. El tramo de mayo y junio incluye las ventanas de campaña; la diferencia no demuestra una estacionalidad semanal estable."
+  },
+  {
+    "number": 7,
+    "basename": "07_comparacion_mae",
+    "titulo": "Error en validación y prueba para los nueve métodos",
+    "nota": "Menor MAE indica mayor precisión. Orden: error de prueba a 30 días. Las cinco referencias adicionales y esta reevaluación se realizan con conocimiento previo del período, por lo que la comparación es retrospectiva y exploratoria."
+  },
+  {
+    "number": 8,
+    "basename": "08_pronosticos_diarios",
+    "titulo": "Pronósticos diarios y picos de la serie de prueba",
+    "nota": "Se muestran dos modelos complejos y dos referencias simples para comparar su reacción a los picos. Cada curva corresponde a 54 pronósticos de un día; las barras son cantidades inferidas de los pedidos."
+  },
+  {
+    "number": 9,
+    "basename": "09_totales_30_dias",
+    "titulo": "Pronóstico acumulado a 30 días desde 25 orígenes de prueba",
+    "nota": "Cada punto compara el pronóstico con el total posterior de la serie depurada. Las ventanas se superponen: no son 25 meses independientes. Se muestran tres métodos para facilitar la lectura; la tabla de resultados incluye los nueve."
+  },
+  {
+    "number": 10,
+    "basename": "10_sesgo_30_dias",
+    "titulo": "Dirección del error en los totales de 30 días",
+    "nota": "Un sesgo negativo indica subestimación; un valor positivo indica sobreestimación. El sesgo puede compensar errores de signo contrario y debe interpretarse junto con el MAE."
+  },
+  {
+    "number": 11,
+    "basename": "11_saldo_reconstruido",
+    "titulo": "Saldo de inventario bajo tres supuestos iniciales",
+    "nota": "Se combinan 420 unidades recibidas durante el período con 405 unidades de venta estimadas. Los saldos negativos representan incompatibilidad del supuesto con el flujo registrado, no faltantes comprobados. No existe conteo físico inicial."
+  },
+  {
+    "number": 12,
+    "basename": "12_escenarios_reposicion",
+    "titulo": "La fecha de llegada limita el efecto de aumentar el pedido",
+    "nota": "Escenarios hipotéticos: plazo fijo de 30 días, stock inicial reducido al 30 % del saldo contable y pedidos para cubrir 60 días. No se incluyen otras recepciones. En junio, las tres reglas producen la misma trayectoria hasta el cierre porque la compra llega el 1 de julio; su efecto posterior no puede evaluarse."
+  }
+]

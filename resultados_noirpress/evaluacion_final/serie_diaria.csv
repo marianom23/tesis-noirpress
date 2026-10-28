@@ -1,0 +1,180 @@
+﻿fecha,demanda,pedidos,sin_pedidos,importe_ars,Mercado Libre,TiendaNube,mes,evento,etapa,ingresos_unidades,saldo_inicial_98
+2026-01-03,1.0,1,False,182990.0,0,1,2026-01,Fuera de ventanas,historial inicial,0,97.0
+2026-01-04,0.0,0,True,0.0,0,0,2026-01,Fuera de ventanas,historial inicial,0,97.0
+2026-01-05,1.0,1,False,161901.0,0,1,2026-01,Fuera de ventanas,historial inicial,0,96.0
+2026-01-06,0.0,0,True,0.0,0,0,2026-01,Fuera de ventanas,historial inicial,0,96.0
+2026-01-07,0.0,0,True,0.0,0,0,2026-01,Fuera de ventanas,historial inicial,0,96.0
+2026-01-08,0.0,0,True,0.0,0,0,2026-01,Fuera de ventanas,historial inicial,0,96.0
+2026-01-09,1.0,1,False,182990.0,0,1,2026-01,Fuera de ventanas,historial inicial,0,95.0
+2026-01-10,0.0,0,True,0.0,0,0,2026-01,Fuera de ventanas,historial inicial,0,95.0
+2026-01-11,0.0,0,True,0.0,0,0,2026-01,Fuera de ventanas,historial inicial,0,95.0
+2026-01-12,1.0,1,False,164691.0,0,1,2026-01,Fuera de ventanas,historial inicial,0,94.0
+2026-01-13,0.0,0,True,0.0,0,0,2026-01,Fuera de ventanas,historial inicial,0,94.0
+2026-01-14,0.0,0,True,0.0,0,0,2026-01,Fuera de ventanas,historial inicial,0,94.0
+2026-01-15,0.0,0,True,0.0,0,0,2026-01,Fuera de ventanas,historial inicial,0,94.0
+2026-01-16,0.0,0,True,0.0,0,0,2026-01,Fuera de ventanas,historial inicial,0,94.0
+2026-01-17,0.0,0,True,0.0,0,0,2026-01,Fuera de ventanas,historial inicial,0,94.0
+2026-01-18,0.0,0,True,0.0,0,0,2026-01,Fuera de ventanas,historial inicial,48,142.0
+2026-01-19,2.0,2,False,367102.1,1,1,2026-01,Fuera de ventanas,historial inicial,0,140.0
+2026-01-20,0.0,0,True,0.0,0,0,2026-01,Fuera de ventanas,historial inicial,0,140.0
+2026-01-21,1.0,1,False,183990.0,0,1,2026-01,Fuera de ventanas,historial inicial,0,139.0
+2026-01-22,0.0,0,True,0.0,0,0,2026-01,Fuera de ventanas,historial inicial,0,139.0
+2026-01-23,3.0,3,False,561552.6,2,1,2026-01,Fuera de ventanas,historial inicial,0,136.0
+2026-01-24,1.0,1,False,165591.0,0,1,2026-01,Fuera de ventanas,historial inicial,0,135.0
+2026-01-25,1.0,1,False,165591.0,0,1,2026-01,Fuera de ventanas,historial inicial,0,134.0
+2026-01-26,1.0,1,False,179890.0,0,1,2026-01,Fuera de ventanas,historial inicial,0,133.0
+2026-01-27,1.0,1,False,197390.0,0,1,2026-01,Fuera de ventanas,historial inicial,0,132.0
+2026-01-28,1.0,1,False,183990.0,0,1,2026-01,Fuera de ventanas,historial inicial,0,131.0
+2026-01-29,0.0,0,True,0.0,0,0,2026-01,Fuera de ventanas,historial inicial,0,131.0
+2026-01-30,0.0,0,True,0.0,0,0,2026-01,Fuera de ventanas,historial inicial,0,131.0
+2026-01-31,0.0,0,True,0.0,0,0,2026-01,Fuera de ventanas,historial inicial,0,131.0
+2026-02-01,3.0,2,False,551970.0,0,2,2026-02,Fuera de ventanas,historial inicial,0,128.0
+2026-02-02,0.0,0,True,0.0,0,0,2026-02,Fuera de ventanas,historial inicial,0,128.0
+2026-02-03,0.0,0,True,0.0,0,0,2026-02,Fuera de ventanas,historial inicial,0,128.0
+2026-02-04,1.0,1,False,183990.0,0,1,2026-02,Fuera de ventanas,historial inicial,0,127.0
+2026-02-05,4.0,4,False,739089.0,2,2,2026-02,Fuera de ventanas,historial inicial,108,231.0
+2026-02-06,1.0,1,False,165591.0,0,1,2026-02,Fuera de ventanas,historial inicial,0,230.0
+2026-02-07,0.0,0,True,0.0,0,0,2026-02,Fuera de ventanas,historial inicial,0,230.0
+2026-02-08,0.0,0,True,0.0,0,0,2026-02,Fuera de ventanas,historial inicial,0,230.0
+2026-02-09,1.0,1,False,183990.0,0,1,2026-02,Fuera de ventanas,historial inicial,0,229.0
+2026-02-10,2.0,2,False,363007.0,2,0,2026-02,Fuera de ventanas,historial inicial,0,227.0
+2026-02-11,4.0,4,False,659898.0,2,2,2026-02,Fuera de ventanas,historial inicial,0,223.0
+2026-02-12,1.0,1,False,164358.0,1,0,2026-02,Fuera de ventanas,historial inicial,0,222.0
+2026-02-13,1.0,1,False,183990.0,0,1,2026-02,Fuera de ventanas,historial inicial,0,221.0
+2026-02-14,2.0,2,False,328716.0,2,0,2026-02,Fuera de ventanas,historial inicial,0,219.0
+2026-02-15,1.0,1,False,165591.0,0,1,2026-02,Fuera de ventanas,historial inicial,0,218.0
+2026-02-16,4.0,4,False,666402.27,4,0,2026-02,Fuera de ventanas,historial inicial,0,214.0
+2026-02-17,1.0,1,False,165591.0,0,1,2026-02,Fuera de ventanas,historial inicial,0,213.0
+2026-02-18,3.0,3,False,503883.26,3,0,2026-02,Fuera de ventanas,historial inicial,0,210.0
+2026-02-19,4.0,4,False,673091.1,3,1,2026-02,Fuera de ventanas,historial inicial,0,206.0
+2026-02-20,1.0,1,False,189595.54,1,0,2026-02,Fuera de ventanas,historial inicial,0,205.0
+2026-02-21,1.0,1,False,166491.0,0,1,2026-02,Fuera de ventanas,historial inicial,0,204.0
+2026-02-22,4.0,4,False,654905.12,4,0,2026-02,Fuera de ventanas,historial inicial,0,200.0
+2026-02-23,3.0,3,False,538943.54,2,1,2026-02,Fuera de ventanas,historial inicial,0,197.0
+2026-02-24,2.0,2,False,363774.1,1,1,2026-02,Fuera de ventanas,historial inicial,0,195.0
+2026-02-25,6.0,4,False,1051209.4000000001,3,1,2026-02,Fuera de ventanas,historial inicial,0,189.0
+2026-02-26,2.0,2,False,326232.0,1,1,2026-02,Fuera de ventanas,historial inicial,0,187.0
+2026-02-27,3.0,3,False,524141.1,3,0,2026-02,Fuera de ventanas,historial inicial,0,184.0
+2026-02-28,2.0,2,False,357568.2,2,0,2026-02,Fuera de ventanas,historial inicial,0,182.0
+2026-03-01,1.0,1,False,179860.0,0,1,2026-03,Fuera de ventanas,historial inicial,0,181.0
+2026-03-02,2.0,2,False,372780.0,2,0,2026-03,Fuera de ventanas,historial inicial,0,179.0
+2026-03-03,4.0,4,False,716212.3,3,1,2026-03,Fuera de ventanas,historial inicial,0,175.0
+2026-03-04,2.0,2,False,340658.1,1,1,2026-03,Fuera de ventanas,historial inicial,0,173.0
+2026-03-05,3.0,3,False,556007.2,3,0,2026-03,Fuera de ventanas,historial inicial,0,170.0
+2026-03-06,4.0,4,False,725947.8400000001,4,0,2026-03,Fuera de ventanas,historial inicial,0,166.0
+2026-03-07,1.0,1,False,164358.0,1,0,2026-03,Fuera de ventanas,historial inicial,0,165.0
+2026-03-08,5.0,5,False,850310.0,2,3,2026-03,Fuera de ventanas,historial inicial,0,160.0
+2026-03-09,6.0,6,False,1050043.2,5,1,2026-03,Fuera de ventanas,historial inicial,0,154.0
+2026-03-10,0.0,0,True,0.0,0,0,2026-03,Fuera de ventanas,historial inicial,0,154.0
+2026-03-11,2.0,2,False,343142.1,2,0,2026-03,Fuera de ventanas,historial inicial,0,152.0
+2026-03-12,1.0,1,False,164358.0,1,0,2026-03,Fuera de ventanas,historial inicial,0,151.0
+2026-03-13,1.0,1,False,189960.0,0,1,2026-03,Fuera de ventanas,historial inicial,0,150.0
+2026-03-14,1.0,1,False,170964.0,0,1,2026-03,Fuera de ventanas,validacion,0,149.0
+2026-03-15,2.0,2,False,355470.0,1,1,2026-03,Fuera de ventanas,validacion,0,147.0
+2026-03-16,3.0,3,False,533102.1,2,1,2026-03,Fuera de ventanas,validacion,0,144.0
+2026-03-17,1.0,1,False,164358.0,1,0,2026-03,Fuera de ventanas,validacion,0,143.0
+2026-03-18,0.0,0,True,0.0,0,0,2026-03,Fuera de ventanas,validacion,0,143.0
+2026-03-19,1.0,1,False,189960.0,0,1,2026-03,Fuera de ventanas,validacion,0,142.0
+2026-03-20,3.0,3,False,506504.27,3,0,2026-03,Fuera de ventanas,validacion,0,139.0
+2026-03-21,2.0,2,False,368759.5,1,1,2026-03,Fuera de ventanas,validacion,0,137.0
+2026-03-22,3.0,3,False,515212.0,1,2,2026-03,Fuera de ventanas,validacion,0,134.0
+2026-03-23,6.0,2,False,1128584.1,1,1,2026-03,Fuera de ventanas,validacion,0,128.0
+2026-03-24,4.0,4,False,671858.1,4,0,2026-03,Fuera de ventanas,validacion,0,124.0
+2026-03-25,1.0,1,False,183961.35,0,1,2026-03,Fuera de ventanas,validacion,0,123.0
+2026-03-26,2.0,2,False,343142.1,2,0,2026-03,Fuera de ventanas,validacion,0,121.0
+2026-03-27,2.0,2,False,354318.0,1,1,2026-03,Fuera de ventanas,validacion,0,119.0
+2026-03-28,3.0,3,False,544278.0,1,2,2026-03,Fuera de ventanas,validacion,0,116.0
+2026-03-29,3.0,3,False,525282.0,1,2,2026-03,Fuera de ventanas,validacion,0,113.0
+2026-03-30,2.0,2,False,354318.0,1,1,2026-03,Fuera de ventanas,validacion,0,111.0
+2026-03-31,1.0,1,False,167348.09,1,0,2026-03,Fuera de ventanas,validacion,0,110.0
+2026-04-01,1.0,1,False,180770.59,1,0,2026-04,Fuera de ventanas,validacion,0,109.0
+2026-04-02,4.0,4,False,766111.09,1,3,2026-04,Fuera de ventanas,validacion,0,105.0
+2026-04-03,2.0,2,False,379920.0,0,2,2026-04,Fuera de ventanas,validacion,0,103.0
+2026-04-04,1.0,1,False,167348.09,1,0,2026-04,Fuera de ventanas,validacion,0,102.0
+2026-04-05,0.0,0,True,0.0,0,0,2026-04,Fuera de ventanas,validacion,0,102.0
+2026-04-06,2.0,2,False,379920.0,0,2,2026-04,Fuera de ventanas,validacion,120,220.0
+2026-04-07,4.0,4,False,689640.0,2,2,2026-04,Fuera de ventanas,validacion,0,216.0
+2026-04-08,1.0,1,False,170964.0,0,1,2026-04,Fuera de ventanas,validacion,0,215.0
+2026-04-09,3.0,3,False,535666.0,2,1,2026-04,Fuera de ventanas,validacion,0,212.0
+2026-04-10,1.0,1,False,164358.0,1,0,2026-04,Fuera de ventanas,validacion,0,211.0
+2026-04-11,1.0,1,False,189960.0,0,1,2026-04,Fuera de ventanas,validacion,0,210.0
+2026-04-12,4.0,4,False,685018.64,3,1,2026-04,Fuera de ventanas,validacion,0,206.0
+2026-04-13,2.0,2,False,348257.0,2,0,2026-04,Fuera de ventanas,validacion,0,204.0
+2026-04-14,4.0,4,False,697644.52,3,1,2026-04,Fuera de ventanas,validacion,0,200.0
+2026-04-15,2.0,2,False,357937.04,2,0,2026-04,Fuera de ventanas,validacion,0,198.0
+2026-04-16,1.0,1,False,189960.0,0,1,2026-04,Fuera de ventanas,validacion,0,197.0
+2026-04-17,3.0,3,False,569880.0,0,3,2026-04,Fuera de ventanas,validacion,0,194.0
+2026-04-18,0.0,0,True,0.0,0,0,2026-04,Fuera de ventanas,validacion,0,194.0
+2026-04-19,3.0,3,False,547897.04,2,1,2026-04,Fuera de ventanas,validacion,0,191.0
+2026-04-20,2.0,2,False,360924.0,0,2,2026-04,Fuera de ventanas,validacion,0,189.0
+2026-04-21,2.0,2,False,328716.0,2,0,2026-04,Fuera de ventanas,validacion,0,187.0
+2026-04-22,4.0,4,False,708636.0,2,2,2026-04,Fuera de ventanas,validacion,0,183.0
+2026-04-23,1.0,1,False,170964.0,0,1,2026-04,Fuera de ventanas,validacion,0,182.0
+2026-04-24,3.0,3,False,536905.5599999999,3,0,2026-04,Fuera de ventanas,validacion,0,179.0
+2026-04-25,3.0,3,False,533728.21,2,1,2026-04,Fuera de ventanas,validacion,0,176.0
+2026-04-26,3.0,3,False,560140.0,1,2,2026-04,Fuera de ventanas,validacion,0,173.0
+2026-04-27,5.0,5,False,949800.0,0,5,2026-04,Fuera de ventanas,validacion,0,168.0
+2026-04-28,2.0,2,False,333807.0,2,0,2026-04,Fuera de ventanas,validacion,0,166.0
+2026-04-29,1.0,1,False,170964.0,0,1,2026-04,Fuera de ventanas,validacion,0,165.0
+2026-04-30,0.0,0,True,0.0,0,0,2026-04,Fuera de ventanas,validacion,0,165.0
+2026-05-01,1.0,1,False,189960.0,0,1,2026-05,Fuera de ventanas,validacion,0,164.0
+2026-05-02,2.0,2,False,379920.0,0,2,2026-05,Fuera de ventanas,validacion,0,162.0
+2026-05-03,2.0,2,False,343326.52,2,0,2026-05,Fuera de ventanas,validacion,0,160.0
+2026-05-04,1.0,1,False,178968.52,1,0,2026-05,Fuera de ventanas,validacion,0,159.0
+2026-05-05,4.0,4,False,694731.0,2,2,2026-05,Fuera de ventanas,validacion,0,155.0
+2026-05-06,1.0,1,False,164358.0,1,0,2026-05,Fuera de ventanas,validacion,0,154.0
+2026-05-07,3.0,3,False,544278.0,1,2,2026-05,Fuera de ventanas,validacion,0,151.0
+2026-05-08,3.0,3,False,569880.0,0,3,2026-05,Fuera de ventanas,prueba,0,148.0
+2026-05-09,1.0,1,False,164358.0,1,0,2026-05,Fuera de ventanas,prueba,0,147.0
+2026-05-10,1.0,1,False,164358.0,1,0,2026-05,Fuera de ventanas,prueba,0,146.0
+2026-05-11,22.0,21,False,3011787.0,2,19,2026-05,Ventana mayo,prueba,0,124.0
+2026-05-12,17.0,16,False,2366955.0,2,14,2026-05,Ventana mayo,prueba,0,107.0
+2026-05-13,10.0,10,False,1464722.5,4,6,2026-05,Ventana mayo,prueba,0,97.0
+2026-05-14,3.0,3,False,431457.5,2,1,2026-05,Ventana mayo,prueba,0,94.0
+2026-05-15,1.0,1,False,168215.0,0,1,2026-05,Ventana mayo,prueba,0,93.0
+2026-05-16,4.0,4,False,798600.0,1,3,2026-05,Ventana mayo,prueba,0,89.0
+2026-05-17,2.0,2,False,362258.0,1,1,2026-05,Ventana mayo,prueba,0,87.0
+2026-05-18,0.0,0,True,0.0,0,0,2026-05,Fuera de ventanas,prueba,0,87.0
+2026-05-19,4.0,4,False,724516.0,2,2,2026-05,Fuera de ventanas,prueba,0,83.0
+2026-05-20,0.0,0,True,0.0,0,0,2026-05,Fuera de ventanas,prueba,0,83.0
+2026-05-21,1.0,1,False,197900.0,0,1,2026-05,Fuera de ventanas,prueba,0,82.0
+2026-05-22,4.0,3,False,652547.0,0,3,2026-05,Fuera de ventanas,prueba,0,78.0
+2026-05-23,3.0,3,False,540368.0,1,2,2026-05,Fuera de ventanas,prueba,0,75.0
+2026-05-24,4.0,4,False,758058.0,1,3,2026-05,Fuera de ventanas,prueba,0,71.0
+2026-05-25,3.0,2,False,564015.0,0,2,2026-05,Fuera de ventanas,prueba,0,68.0
+2026-05-26,0.0,0,True,0.0,0,0,2026-05,Fuera de ventanas,prueba,0,68.0
+2026-05-27,3.0,3,False,564015.0,0,3,2026-05,Fuera de ventanas,prueba,144,209.0
+2026-05-28,0.0,0,True,0.0,0,0,2026-05,Fuera de ventanas,prueba,0,209.0
+2026-05-29,3.0,3,False,593700.0,0,3,2026-05,Fuera de ventanas,prueba,0,206.0
+2026-05-30,0.0,0,True,0.0,0,0,2026-05,Fuera de ventanas,prueba,0,206.0
+2026-05-31,2.0,2,False,395800.0,0,2,2026-05,Fuera de ventanas,prueba,0,204.0
+2026-06-01,1.0,1,False,168215.0,0,1,2026-06,Fuera de ventanas,prueba,0,203.0
+2026-06-02,3.0,3,False,593700.0,0,3,2026-06,Fuera de ventanas,prueba,0,200.0
+2026-06-03,2.0,1,False,395800.0,0,1,2026-06,Fuera de ventanas,prueba,0,198.0
+2026-06-04,1.0,1,False,168215.0,0,1,2026-06,Fuera de ventanas,prueba,0,197.0
+2026-06-05,5.0,5,False,908616.0,2,3,2026-06,Fuera de ventanas,prueba,0,192.0
+2026-06-06,5.0,5,False,787290.0,5,0,2026-06,Fuera de ventanas,prueba,0,187.0
+2026-06-07,3.0,2,False,413439.0,1,1,2026-06,Fuera de ventanas,prueba,0,184.0
+2026-06-08,3.0,3,False,512816.0,2,1,2026-06,Fuera de ventanas,prueba,0,181.0
+2026-06-09,4.0,4,False,695936.0,3,1,2026-06,Fuera de ventanas,prueba,0,177.0
+2026-06-10,3.0,3,False,512816.0,2,1,2026-06,Fuera de ventanas,prueba,0,174.0
+2026-06-11,2.0,2,False,355358.0,1,1,2026-06,Fuera de ventanas,prueba,0,172.0
+2026-06-12,2.0,2,False,395800.0,0,2,2026-06,Fuera de ventanas,prueba,0,170.0
+2026-06-13,3.0,3,False,578920.0,1,2,2026-06,Fuera de ventanas,prueba,0,167.0
+2026-06-14,10.0,10,False,1741585.0,5,5,2026-06,Ventana junio,prueba,0,157.0
+2026-06-15,9.0,9,False,1739518.0,3,6,2026-06,Ventana junio,prueba,0,148.0
+2026-06-16,6.0,6,False,1062775.0,4,2,2026-06,Ventana junio,prueba,0,142.0
+2026-06-17,8.0,8,False,1452750.0,5,3,2026-06,Ventana junio,prueba,0,134.0
+2026-06-18,1.0,1,False,186390.0,1,0,2026-06,Fuera de ventanas,prueba,0,133.0
+2026-06-19,1.0,1,False,197645.25,1,0,2026-06,Fuera de ventanas,prueba,0,132.0
+2026-06-20,0.0,0,True,0.0,0,0,2026-06,Fuera de ventanas,prueba,0,132.0
+2026-06-21,1.0,1,False,197900.0,0,1,2026-06,Fuera de ventanas,prueba,0,131.0
+2026-06-22,1.0,1,False,197900.0,0,1,2026-06,Fuera de ventanas,prueba,0,130.0
+2026-06-23,1.0,1,False,197900.0,0,1,2026-06,Fuera de ventanas,prueba,0,129.0
+2026-06-24,5.0,4,False,900445.0,0,4,2026-06,Fuera de ventanas,prueba,0,124.0
+2026-06-25,4.0,4,False,732230.0,0,4,2026-06,Fuera de ventanas,prueba,0,120.0
+2026-06-26,1.0,1,False,168215.0,0,1,2026-06,Fuera de ventanas,prueba,0,119.0
+2026-06-27,1.0,1,False,197900.0,0,1,2026-06,Fuera de ventanas,prueba,0,118.0
+2026-06-28,0.0,0,True,0.0,0,0,2026-06,Fuera de ventanas,prueba,0,118.0
+2026-06-29,5.0,5,False,989500.0,0,5,2026-06,Fuera de ventanas,prueba,0,113.0
+2026-06-30,0.0,0,True,0.0,0,0,2026-06,Fuera de ventanas,prueba,0,113.0

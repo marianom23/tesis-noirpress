@@ -1,0 +1,102 @@
+REVISIÓN DE FUENTES Y CITAS — 28/10/2026
+Archivo: Tesina Noirpress - version final.pdf (30 páginas).
+
+Resultado: 29 referencias seleccionadas; las 29 tienen una cita identificada en el cuerpo del PDF. No se detectaron citas autor-año sin entrada correspondiente en la lectura del documento.
+
+Alcance: 15 artículos con DOI cotejados contra metadatos de Crossref (archivo JSON adjunto en esta carpeta). Los otros registros externos se cotejaron con fichas editoriales, sitios de los autores, catálogos bibliográficos y documentación oficial. Las dos fuentes Noirpress corresponden a archivos internos presentes en fuentes/. No son publicaciones externas.
+
+No se detectaron discrepancias en autores, años, títulos, volúmenes o páginas de los artículos cotejados. Croston mantiene el nombre histórico Operational Research Quarterly; Crossref usa el nombre posterior de la revista.
+
+Comprobaciones de contenido específicas: anuncio de TimesFM-3 del 31/08/2026; existencia de la revisión fijada y licencia no comercial en Hugging Face; Hot Sale oficial del 11 al 13/05/2026; documentación statsmodels 0.15.0; origen móvil en Tashman; alcance de evaluación en Bergmeir; incertidumbre conjunta de demanda y plazo en Eppen; antecedente TimesFM en Das.
+
+LÍMITES: esta revisión no certifica cada paráfrasis contra el texto íntegro de todas las fuentes. En particular, quedan sin cotejo de páginas completas los libros de Box, Chopra y Meindl, Nahmias y Olsen, Silver y colaboradores, y el artículo completo de Corsten y Gruen. No se asignaron páginas inventadas. No se comprobó una norma bibliográfica oficial de UGR ni se certifica cumplimiento de una edición concreta de APA. Los enlaces a documentación viva pueden cambiar. La autenticidad de los registros internos depende de su origen comercial, no de una publicación externa.
+
+No se modificó el PDF: no se encontró un error bibliográfico concreto que justificara cambiarlo.
+
+REFERENCIAS CONTROLADAS:
+Bergmeir, C., y Benítez, J. M. (2012). On the use of cross-validation for time series predictor evaluation. Information Sciences, 191, 192-213.
+https://doi.org/10.1016/j.ins.2011.12.028
+
+Box, G. E. P., Jenkins, G. M., Reinsel, G. C., y Ljung, G. M. (2015). Time series analysis: Forecasting and control (5.ª ed.). Wiley.
+https://www.wiley.com/en-us/time-series-analysis-forecasting-and-control-5th-edition-p-9781118675021
+
+Cámara Argentina de Comercio Electrónico. (2026, 11 de mayo). Hot Sale 2026: Hasta el momento, la madrugada registró el pico más alto de usuarios.
+https://cace.org.ar/blogs/news/hot-sale-2026-hasta-el-momento-la-madrugada-registro-el-pico-mas-alto-de-usuarios
+
+Chopra, S., y Meindl, P. (2016). Supply chain management: Strategy, planning, and operation (6.ª ed.). Pearson.
+https://books.google.com/books/about/Supply_Chain_Management.html?id=m1XFoQEACAAJ
+
+Corsten, D., y Gruen, T. (2004, mayo). Stock-outs cause walkouts. Harvard Business Review.
+https://hbr.org/2004/05/stock-outs-cause-walkouts
+
+Croston, J. D. (1972). Forecasting and stock control for intermittent demands. Operational Research Quarterly, 23(3), 289-303.
+https://doi.org/10.1057/jors.1972.50
+
+Das, A., Kong, W., Sen, R., y Zhou, Y. (2024). A decoder-only foundation model for time-series forecasting. Proceedings of the 41st International Conference on Machine Learning, Proceedings of Machine Learning Research, 235, 10148-10167.
+https://proceedings.mlr.press/v235/das24c.html
+
+Eppen, G. D., y Martin, R. K. (1988). Determining safety stock in the presence of stochastic lead time and demand. Management Science, 34(11), 1380-1390.
+https://doi.org/10.1287/mnsc.34.11.1380
+
+Fildes, R., Ma, S., y Kolassa, S. (2022). Retail forecasting: Research and practice. International Journal of Forecasting, 38(4), 1283-1318.
+https://doi.org/10.1016/j.ijforecast.2019.06.004
+
+Gardner, E. S., Jr., y McKenzie, E. (1985). Forecasting trends in time series. Management Science, 31(10), 1237-1246.
+https://doi.org/10.1287/mnsc.31.10.1237
+
+Google. (2026). TimesFM 3.0 PyTorch [Pesos y ficha del modelo, revisión 43046b85ec22d584a13f8098c2ed39c889e129c2]. Hugging Face.
+https://huggingface.co/google/timesfm-3.0-pytorch/tree/43046b85ec22d584a13f8098c2ed39c889e129c2
+
+Google Research. (s. f.). TimesFM [Repositorio de software]. GitHub. Consultado el 20 de octubre de 2026.
+https://github.com/google-research/timesfm
+
+Holt, C. C. (2004). Forecasting seasonals and trends by exponentially weighted moving averages. International Journal of Forecasting, 20(1), 5-10. (Trabajo original publicado en 1957).
+https://doi.org/10.1016/j.ijforecast.2003.09.015
+
+Hyndman, R. J., y Athanasopoulos, G. (2021). Forecasting: Principles and practice (3.ª ed.). OTexts. Versión en línea consultada el 20 de octubre de 2026.
+https://otexts.com/fpp3/
+
+Hyndman, R. J., y Koehler, A. B. (2006). Another look at measures of forecast accuracy. International Journal of Forecasting, 22(4), 679-688.
+https://doi.org/10.1016/j.ijforecast.2006.03.001
+
+Jain, A., y Sen, R. (2026, 31 de agosto). TimesFM-3: A zero-shot foundation model for multivariate forecasting. Google Research.
+https://www.research.google/blog/timesfm-3-a-zero-shot-foundation-model-for-multivariate-forecasting/
+
+Makridakis, S., Spiliotis, E., y Assimakopoulos, V. (2018). Statistical and machine learning forecasting methods: Concerns and ways forward. PLOS ONE, 13(3), e0194889.
+https://doi.org/10.1371/journal.pone.0194889
+
+Makridakis, S., Spiliotis, E., y Assimakopoulos, V. (2020). The M4 Competition: 100,000 time series and 61 forecasting methods. International Journal of Forecasting, 36(1), 54-74.
+https://doi.org/10.1016/j.ijforecast.2019.04.014
+
+Makridakis, S., Spiliotis, E., y Assimakopoulos, V. (2022). M5 accuracy competition: Results, findings, and conclusions. International Journal of Forecasting, 38(4), 1346-1364.
+https://doi.org/10.1016/j.ijforecast.2021.11.013
+
+Nahmias, S. (1994). Demand estimation in lost sales inventory systems. Naval Research Logistics, 41(6), 739-757.
+https://doi.org/10.1002/1520-6750(199410)41:6%3C739::AID-NAV3220410605%3E3.0.CO;2-A
+
+Nahmias, S., y Olsen, T. L. (2015). Production and operations analysis (7.ª ed.). Waveland Press.
+https://books.google.com/books/about/Production_and_Operations_Analysis.html?id=SIsoBgAAQBAJ
+
+Noirpress. (2026a). Control de pedidos, ventas y quiebres de stock [Libro de cálculo interno no publicado; archivo control_pedidos_ventas_quiebres_noirpress.xlsx].
+fuentes/control_pedidos_ventas_quiebres_noirpress.xlsx
+
+Noirpress. (2026b). Órdenes de enero a junio de 2026 [Exportación interna no publicada; archivo ultimas_ordenes_2026-07-06.xlsx].
+fuentes/ultimas_ordenes_2026-07-06.xlsx
+
+Silver, E. A., Pyke, D. F., y Peterson, R. (1998). Inventory management and production planning and scheduling (3.ª ed.). Wiley.
+Cotejo de ficha bibliográfica: https://books.google.com/books/about/Inventory_Management_and_Production_Plan.html?id=GI5jQgAACAAJ
+
+statsmodels. (s. f.). SARIMAX y ExponentialSmoothing [Documentación de la API, versión 0.15.0]. Consultado el 20 de octubre de 2026.
+https://www.statsmodels.org/stable/generated/statsmodels.tsa.statespace.sarimax.SARIMAX.html
+
+Syntetos, A. A., y Boylan, J. E. (2005). The accuracy of intermittent demand estimates. International Journal of Forecasting, 21(2), 303-314.
+https://doi.org/10.1016/j.ijforecast.2004.10.001
+
+Syntetos, A. A., Boylan, J. E., y Croston, J. D. (2005). On the categorization of demand patterns. Journal of the Operational Research Society, 56(5), 495-503.
+https://doi.org/10.1057/palgrave.jors.2601841
+
+Tashman, L. J. (2000). Out-of-sample tests of forecasting accuracy: An analysis and review. International Journal of Forecasting, 16(4), 437-450.
+https://doi.org/10.1016/S0169-2070(00)00065-0
+
+Winters, P. R. (1960). Forecasting sales by exponentially weighted moving averages. Management Science, 6(3), 324-342.
+https://doi.org/10.1287/mnsc.6.3.324

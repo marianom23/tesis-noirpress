@@ -1,0 +1,10 @@
+{
+  "cuatro_originales": {
+    "1": "TimesFM 3.0",
+    "30": "SARIMAX"
+  },
+  "nueve_exploratorios": {
+    "1": "Mediana 28 días",
+    "30": "Mediana 28 días"
+  }
+}

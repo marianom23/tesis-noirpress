@@ -1,0 +1,401 @@
+@chapter Resumen
+
+Este trabajo evaluó métodos de pronóstico de ventas y su relación con la reposición de Noirpress, una microimportadora argentina de cafeteras portátiles que comercializa mediante TiendaNube y Mercado Libre. El análisis consideró un plazo de abastecimiento de 30 días, correspondiente a la demora habitual informada para el negocio.
+
+La fuente contiene 409 órdenes del 3 de enero al 30 de junio de 2026. Después de excluir diez operaciones de importe cero informadas como canceladas y ocho órdenes de costo bajo, la base reúne 391 pedidos. Como no se dispone de cantidades por producto, se reconstruye una serie de 179 días y 405 unidades estimadas mediante una referencia de importes calculada con observaciones anteriores a cada fecha.
+
+Se comparan nueve métodos para el día siguiente y el total de los próximos 30 días. La mediana de 28 días obtiene el menor error de validación en ambos horizontes. En prueba, SARIMAX registra el menor MAE diario, con 2,27 unidades; la media de 28 días presenta el menor MAE acumulado, con 23,6 unidades por ventana. Las alternativas se examinan sobre un período previamente explorado, por lo que estos resultados tienen alcance retrospectivo y no constituyen una validación operativa independiente.
+
+Los escenarios de inventario muestran que una mayor cantidad comprada sólo modifica la disponibilidad desde su recepción. En el ejercicio con emisión el 27 de abril y llegada el 27 de mayo, las tres reglas acumulan las mismas 50 unidades de faltante simulado durante la espera, aunque difieren después de la llegada.
+
+Los resultados muestran que las referencias simples pueden ser útiles para estimar las ventas durante el plazo de abastecimiento. La reposición requiere combinar esa estimación con las existencias y las fechas de recepción. Debido al uso de cantidades estimadas, stock inicial supuesto y escenarios hipotéticos, el estudio no permite afirmar una reducción de quiebres reales ni determinar una política óptima de compras.
+
+Palabras clave: pronóstico de demanda; gestión de inventarios; microimportadora; series de tiempo; reposición; comercio electrónico.
+
+Temática de Interés en Ciencia de Datos: pronóstico de series temporales y análisis de decisiones de reposición.
+
+@chapter 1. Problemática observada
+
+Una microimportadora debe decidir sus compras antes de conocer las ventas que atenderá con ellas. Mientras la mercadería se prepara, se transporta y completa su ingreso al país, el negocio depende de las existencias disponibles. Comprar tarde puede generar faltantes; comprar en exceso compromete recursos en productos que aún no se venden. El problema consiste en coordinar cantidades y fechas con una demanda que puede cambiar durante la espera.
+
+En esta tesina, el término microimportadora describe una operación de pequeña escala, administrada por una o pocas personas, con un catálogo acotado y reposiciones en lotes de decenas o pocos cientos de unidades. Se utiliza como caracterización del caso, sin atribuirle una categoría jurídica o tributaria. Su escala vuelve relevante disponer de reglas comprensibles que puedan sostenerse con los registros y recursos del propio negocio.
+
+El comercio electrónico facilita la conservación de pedidos, importes y fechas. Sin embargo, esos registros suelen responder a necesidades de cobro y despacho. No siempre contienen cantidades por producto, inventario físico o fechas de emisión de las compras. La posibilidad de pronosticar ventas depende, por ello, tanto del método elegido como de la calidad de la variable que se construye con las fuentes.
+
+La falta de disponibilidad puede conducir al cliente a postergar la compra o elegir otro proveedor (Corsten y Gruen, 2004). Aun así, una exportación sin ventas no demuestra por sí sola un quiebre: también puede reflejar poca actividad, interrupciones del canal o cobertura incompleta. Esta diferencia entre lo registrado y lo ocurrido delimita la interpretación del estudio.
+
+@section 1.1 El caso Noirpress
+
+Noirpress es un emprendimiento argentino cuyo propietario es Ignacio Giordano. Comercializa una cafetera portátil en dos colores mediante TiendaNube y Mercado Libre, y registra ocasionalmente artículos de menor valor. El estudio utiliza órdenes y recepciones de mercadería del primer semestre de 2026 para examinar una decisión concreta: anticipar las ventas durante la espera de una nueva compra.
+
+La fuente contiene 409 órdenes entre el 3 de enero y el 30 de junio. Tras la depuración, se conservan 391 pedidos: 214 de TiendaNube y 177 de Mercado Libre. La reconstrucción produce 405 unidades estimadas distribuidas en 179 días. Las cantidades vendidas son estimaciones obtenidas de los importes; las cantidades recibidas provienen de la planilla de ingresos. Los saldos de inventario combinan ambas magnitudes y dependen de la existencia inicial supuesta.
+
+Durante el semestre se documentaron cuatro recepciones comerciales de 48, 108, 120 y 144 unidades. Un quinto lote de 144 ingresó el 1 de julio. Los autores informan un plazo habitual de reposición de 30 días y mencionan que puede extenderse hasta 35. Se adopta el valor habitual como parámetro de los escenarios, porque las fuentes no contienen las fechas de emisión necesarias para medir los plazos de cada compra.
+
+La utilidad de un pronóstico se considera en relación con esa espera. Una estimación del próximo día sirve para describir la actividad inmediata; el total de los próximos 30 días se relaciona de manera más directa con la cobertura necesaria hasta una recepción. Ambos horizontes se evalúan para determinar si exigen decisiones diferentes.
+
+@section 1.2 Pregunta de investigación
+
+La pregunta de investigación es: ¿con qué precisión pueden anticiparse las ventas diarias y el total de los próximos 30 días de Noirpress a partir de sus registros, y qué implicaciones tienen esos pronósticos para la reposición?
+
+@chapter 2. Hipótesis de Investigación
+
+Se plantean tres hipótesis orientadoras. H1: al menos uno de los métodos evaluados reduce el MAE de la media de siete días en los dos horizontes de prueba. H2: una mayor complejidad no garantiza un menor MAE acumulado de 30 días frente a referencias simples, dentro del conjunto comparado. H3: aumentar una compra que llega después de un pico no evita los faltantes anteriores a su recepción.
+
+Las dos primeras se examinan mediante la comparación retrospectiva; la tercera se analiza en escenarios y expresa una condición temporal de abastecimiento. La investigación no contrasta una reducción de quiebres reales ni estima el efecto causal de campañas o publicidad.
+
+@chapter 3. Objetivo General
+
+Desarrollar y evaluar un procedimiento que vincule la depuración de órdenes, la reconstrucción de una serie diaria, la comparación temporal de pronósticos y la exploración de decisiones de compra bajo supuestos explícitos de inventario y plazo.
+
+@chapter 4. Objetivos Específicos
+
+Los objetivos específicos son:
+
+@item 1. Reconstruir una base trazable, distinguiendo pedidos observados, unidades estimadas y movimientos de inventario documentados.
+@item 2. Caracterizar la evolución de las ventas, su concentración temporal y la participación de los canales.
+@item 3. Comparar referencias simples y modelos de distinta complejidad con los mismos datos, fechas y horizontes.
+@item 4. Examinar la magnitud y dirección de los errores, y su relación con los períodos de mayor actividad.
+@item 5. Comparar cantidades de compra y cobertura de inventario en escenarios con fechas de emisión y recepción definidas, distinguiendo los faltantes anteriores y posteriores a la llegada.
+
+@chapter 5. Marco teórico
+
+@section 5.1 Inventario, demanda durante la espera y reposición
+
+La gestión de inventarios combina decisiones sobre el momento y la cantidad de compra, procurando sostener la disponibilidad sin acumular existencias innecesarias (Silver, Pyke y Peterson, 1998; Chopra y Meindl, 2016). El pronóstico aporta una estimación de ventas; la decisión exige además conocer el inventario disponible, los compromisos pendientes y las compras en tránsito.
+
+El punto de reposición representa un umbral para emitir una compra. En una formulación básica, suma la demanda esperada durante el plazo de entrega y una reserva de seguridad (Nahmias y Olsen, 2015):
+
+@formula Punto de reposición = demanda esperada durante el plazo + stock de seguridad
+
+Si la tasa diaria esperada es constante, la demanda durante la espera se obtiene multiplicando esa tasa por el plazo. Cuando existen compras en camino, el umbral debe compararse con la posición de inventario: existencias disponibles más unidades pendientes de recepción, menos ventas comprometidas. La cantidad física presente y la posición de inventario cumplen funciones diferentes dentro de la decisión.
+
+@figure 1
+
+El stock de seguridad procura absorber parte de la incertidumbre. Eppen y Martin (1988) muestran la relevancia de considerar conjuntamente la variación de la demanda y del plazo. Una demora amplía el período que debe cubrirse aun cuando la tasa diaria no cambie. Por eso, una referencia de 30 días no permite inferir automáticamente la cobertura necesaria ante una espera de 35.
+
+La reposición también tiene una restricción temporal: las unidades compradas sólo están disponibles desde su llegada. Una cantidad mayor puede mejorar la cobertura posterior, pero no modifica los faltantes producidos durante el tránsito. Los escenarios del estudio permiten examinar esa relación sin atribuir a las simulaciones el carácter de movimientos históricos observados.
+
+@section 5.2 Qué representa una serie de ventas
+
+Una serie de tiempo ordena observaciones cronológicamente. En ventas diarias pueden distinguirse cambios de nivel, tendencia, estacionalidad y variaciones irregulares (Box, Jenkins, Reinsel y Ljung, 2015; Hyndman y Athanasopoulos, 2021). Estas categorías ayudan a describir el comportamiento; su utilidad predictiva debe comprobarse fuera de las observaciones utilizadas para ajustar el método.
+
+Un promedio elevado en un día de la semana puede deberse a pocas campañas coincidentes con ese día. Del mismo modo, un aumento reciente puede ser transitorio o reflejar un nivel sostenido de actividad. Una muestra de seis meses ofrece pocos episodios para distinguir esas explicaciones y no permite identificar una estacionalidad anual repetida.
+
+Las ventas registradas tampoco equivalen necesariamente a la demanda total. Cuando un cliente no puede comprar por falta de disponibilidad, su intención puede quedar fuera del archivo. Nahmias (1994) estudia esta demanda censurada. Sin observaciones de stock y disponibilidad, el pronóstico se refiere a la serie registrada; no recupera por sí mismo las compras que no se concretaron.
+
+Los días sin ventas requieren otra distinción. En demanda intermitente, los intervalos sin actividad y el tamaño de las ventas positivas pueden modelarse por separado, como propuso Croston (1972). Syntetos y Boylan (2005) desarrollaron una corrección del sesgo, y Syntetos, Boylan y Croston (2005) aportaron criterios de clasificación. La presencia de algunos ceros no basta para elegir uno de estos métodos: importa su distribución y estabilidad. En Noirpress se trabaja con la serie agregada; una futura separación por color o artículo podría presentar una intermitencia diferente.
+
+@section 5.3 Métodos simples, estadísticos y preentrenados
+
+Las referencias simples establecen qué precisión puede alcanzarse con reglas transparentes: repetir el último valor, repetir la semana anterior o utilizar un promedio reciente. Su inclusión permite evaluar si un modelo más complejo aporta una mejora que justifique su costo de implementación (Hyndman y Athanasopoulos, 2021).
+
+Holt-Winters estima nivel, tendencia y estacionalidad mediante suavizado exponencial. La tendencia amortiguada limita la prolongación indefinida del crecimiento observado (Holt, 2004; Winters, 1960; Gardner y McKenzie, 1985). SARIMAX representa dependencias temporales e incorpora componentes estacionales y variables externas, como el calendario conocido para las fechas futuras (Box et al., 2015).
+
+Los modelos preentrenados aprenden de colecciones amplias de series antes de aplicarse a un nuevo caso. TimesFM puede producir pronósticos sin ajustar sus pesos con la historia específica del negocio (Das, Kong, Sen y Zhou, 2024). Esa posibilidad resulta pertinente cuando existen pocos datos propios, pero no asegura una ventaja frente a promedios u otros métodos. El antecedente académico debe distinguirse de la versión concreta ejecutada.
+
+Las competencias de pronóstico refuerzan la necesidad de comparar. Makridakis, Spiliotis y Assimakopoulos (2018) encontraron resultados favorables para métodos estadísticos en el conjunto que estudiaron. La M4 destacó combinaciones y enfoques híbridos (Makridakis et al., 2020), mientras que la M5 examinó numerosas series diarias de productos relacionados (Makridakis et al., 2022). Esos entornos difieren del historial breve de una sola microimportadora y no establecen un ganador aplicable de manera universal.
+
+En el comercio minorista, las promociones, la calidad de los datos y la intermitencia condicionan la elección del método (Fildes, Ma y Kolassa, 2022). En Noirpress, la reconstrucción de cantidades y la concentración de ventas forman parte de ese problema. El método debe juzgarse sobre la información que realmente puede utilizarse y sobre el horizonte de la decisión.
+
+@section 5.4 Evaluación temporal e interpretación del error
+
+Una evaluación temporal reproduce qué información se habría tenido al emitir cada pronóstico. Con origen móvil, el método recibe la historia hasta una fecha, predice las siguientes observaciones y luego avanza a un nuevo origen (Tashman, 2000). Esto evita ajustar una predicción con ventas posteriores al momento en que se supone emitida.
+
+La validación permite comparar alternativas con una regla de selección común; el tramo posterior permite examinar su comportamiento fuera de esa selección. Esta separación no elimina toda dependencia ni convierte un análisis retrospectivo en una prueba operativa. Si las alternativas se eligieron después de explorar el período completo, la interpretación debe conservar ese carácter exploratorio. Bergmeir y Benítez (2012) subrayan que las condiciones de evaluación importan tanto como la técnica de partición.
+
+El MAE informa la magnitud media del error en unidades, el RMSE penaliza más los errores grandes y el sesgo muestra su dirección. El WAPE relaciona el error absoluto agregado con el volumen observado. El MAPE no se adopta como criterio principal porque las observaciones iguales a cero impiden calcularlo de manera general (Hyndman y Koehler, 2006).
+
+En reposición, la evaluación debe considerar el total del período de espera. Un método puede describir razonablemente muchos días y subestimar el acumulado durante una campaña. Además, ventanas consecutivas de 30 días comparten casi todas sus observaciones: sus errores no equivalen a resultados de meses independientes.
+
+Las campañas se utilizan para describir dónde se concentran errores y ventas. Su coincidencia temporal no identifica por sí sola un efecto causal. Incorporarlas como predictores exigiría información conocida al emitir el pronóstico y una evaluación que separase su contribución de la del resto del método.
+
+@chapter 6. Metodología
+
+Se realizó un estudio de caso cuantitativo, retrospectivo y aplicado. Se utilizaron métodos existentes para analizar los registros comerciales de Noirpress y evaluar escenarios de reposición. Las conclusiones se circunscriben a este negocio y al período observado.
+
+El procedimiento comprende la preparación de los registros, la construcción de la serie diaria, la comparación temporal de métodos y la simulación de compras. Las fuentes se describen en la sección 7; los resultados, en la sección 8. La discusión y las conclusiones se presentan por separado, y el Anexo A reúne los elementos de reproducibilidad.
+
+@section 6.1 Depuración y criterios de inclusión
+
+La depuración excluye diez órdenes de importe cero, informadas como canceladas por los autores, y ocho órdenes con costo de producto inferior a $20.000, conforme al criterio adoptado para el estudio. En esos ocho casos, el costo registrado está entre $7.999 y $10.000. La fuente no incluye un estado independiente que confirme las cancelaciones ni identifica el producto de los ocho casos restantes. Por ello, no se les atribuye una categoría de artículo o un motivo comercial no verificado. Se mantienen los demás importes inusuales: un valor extremo no demuestra por sí solo un error.
+
+La base analítica contiene 391 pedidos. Los vacíos de costos y comisiones se conservan como ausencias cuando no existe evidencia para convertirlos en ceros. El significado completo del campo «Neto» no pudo establecerse, por lo que no se calculan márgenes ni rentabilidad a partir de él.
+
+Mercado Libre deja de registrar ventas después del 19 de junio. La posible falta de stock en Mercado Libre Full fue mencionada como explicación, pero no se dispone de movimientos o estados de publicación que la corroboren. Esas fechas se mantienen como días sin ventas registradas en el canal; no se imputan ventas perdidas.
+
+@section 6.2 Reconstrucción de cantidades y serie diaria
+
+La exportación no informa cantidades por producto. Se aproxima la cantidad de cada pedido dividiendo su importe por una referencia típica y redondeando al entero más próximo, con un mínimo de una unidad para las órdenes con cobro. La referencia es la mediana de los importes positivos de los 30 días anteriores, excluido el día que se estima.
+
+Si esa ventana carece de observaciones, se utiliza la historia previa disponible. En el inicio, cuando aún no hay antecedentes, se asigna una unidad a cada pedido. El cociente se redondea primero a dos decimales y luego al entero más próximo, resolviendo las mitades hacia arriba. Esta regla reproduce la implementación y evita utilizar precios de ventas posteriores.
+
+Se obtiene una serie diaria de 405 unidades estimadas. Los días sin pedidos se completan con cero dentro del período observado, sin extenderlo artificialmente. En paralelo se conservan el número de pedidos y su distribución por canal para distinguir cantidades reconstruidas de conteos directamente observados.
+
+La aproximación puede verse afectada por cambios de precio, promociones, envíos o composición de una orden. La mediana reduce la influencia de importes extremos sobre la referencia, pero no transforma el importe en una medición física. Un control temporal comprueba que modificar información futura no altere las unidades ya asignadas a fechas anteriores.
+
+@section 6.3 Exploración y variables disponibles
+
+La exploración describe la evolución mensual, los días sin pedidos, los valores extremos y la participación de ambos canales. Los promedios recientes permiten examinar cambios de nivel; la comparación entre períodos ayuda a evaluar si las diferencias por día de la semana son persistentes o dependen de episodios puntuales.
+
+La información se clasifica según su disponibilidad temporal. El día de la semana de una fecha futura es conocido al pronosticar. El importe, el costo o el canal de una venta aún no realizada no lo son. Estos últimos pueden caracterizar operaciones observadas, pero no se utilizan como entradas futuras del modelo.
+
+Las ventanas comerciales permiten localizar concentraciones de actividad. La del 11 al 17 de mayo incluye los tres días oficiales del Hot Sale, del 11 al 13 de mayo (Cámara Argentina de Comercio Electrónico, 2026); su extensión analítica no modifica la duración del evento. La ventana del 14 al 17 de junio describe otro episodio de ventas. Se las considera al interpretar resultados, sin estimar un multiplicador general de campaña.
+
+@section 6.4 Métodos comparados
+
+La comparación reúne seis referencias simples y tres modelos. Las referencias son la media de siete días, el último valor observado, la repetición de la última semana, la media histórica, la media de 28 días y la mediana de 28 días. Todas se calculan con información disponible hasta el origen y generan predicciones para los mismos horizontes.
+
+Holt-Winters utiliza tendencia aditiva amortiguada y estacionalidad semanal aditiva. SARIMAX emplea la configuración (1,0,1), un componente estacional (1,0,0) de período siete y dos variables cíclicas que representan el día de la semana. Sus parámetros se ajustan en cada origen con la historia disponible; los pronósticos negativos se limitan a cero.
+
+TimesFM 3.0 se ejecuta sin ajustar sus pesos con los datos de Noirpress y con variables de calendario conocidas. Se utiliza una revisión fija, identificada en el manifiesto de ejecución. La versión fue anunciada el 31 de agosto de 2026 (Jain y Sen, 2026), después del período observado; su evaluación constituye, por tanto, una comparación académica retrospectiva.
+
+La ficha de los pesos establece condiciones de uso no comercial (Google, 2026), diferentes de la licencia del código (Google Research, s. f.). Su inclusión no constituye una propuesta de ejecución productiva en Noirpress. No se evalúan todas las familias de modelos existentes; las conclusiones se limitan al conjunto y a las configuraciones ensayadas.
+
+@section 6.5 Protocolo temporal y métricas
+
+Los primeros 70 días forman el historial inicial. La validación comprende 55 fechas, del 14 de marzo al 7 de mayo; la prueba incluye las 54 restantes, del 8 de mayo al 30 de junio. En cada origen, la historia disponible termina el día anterior a la primera fecha pronosticada. Se evalúan el próximo día y el total de los 30 días posteriores al origen.
+
+@table 1
+
+@figure 2
+
+El origen avanza diariamente y los métodos reciben la misma historia de ventas. Sólo se puntúan ventanas acumuladas contenidas por completo en cada tramo: 26 en validación y 25 en prueba. Las ventanas consecutivas comparten 29 observaciones, por lo que no se interpretan como muestras independientes.
+
+La selección por horizonte utiliza el menor MAE de validación, con RMSE como desempate. El sesgo y el WAPE complementan la lectura. Las métricas del horizonte acumulado se calculan sobre totales de 30 días, no sumando errores medios diarios. El anexo detalla sus definiciones.
+
+La comparación final aplica este protocolo a la misma base depurada. No obstante, las alternativas y parte de la exploración se definieron después de conocer el período completo. El recálculo permite comparar de forma consistente, pero no restaura la independencia de una evaluación prospectiva. Los resultados se interpretan como evidencia retrospectiva del caso, sin atribuirles significación o estabilidad universal.
+
+@section 6.6 Inventario y escenarios de compra
+
+Las recepciones anteriores al 3 de enero suman 98 unidades, incluidas dos de muestra. Ese valor se utiliza como inventario inicial supuesto, condicionado a la ausencia de ventas previas y otros movimientos no documentados. El saldo reconstruido se obtiene añadiendo recepciones y restando ventas estimadas; no se presenta como un conteo físico.
+
+Los escenarios fijan la recepción 30 días de calendario después de la fecha de emisión. La compra se emite al cierre del día y se incorpora al stock al comienzo de la fecha de llegada. Esta convención determina qué días se clasifican como anteriores a la recepción. Hasta esa fecha, las ventas de referencia se atienden con el inventario disponible; el exceso constituye un faltante simulado y el stock permanece en cero.
+
+La regla de compra utiliza un horizonte de 60 días contados desde el día siguiente a la emisión. Con la convención adoptada, el escenario completo comprende 29 días anteriores a la llegada y 31 días desde la recepción, incluida esa fecha. Por lo tanto, el horizonte no se divide en dos bloques de 30 días de ventas. La tasa diaria se calcula con la media de siete días, la media de 28 días o la mediana de 28 días:
+
+@formula Compra = redondeo superior de máx(0; 60 × tasa diaria − stock disponible)
+
+Para representar disponibilidad reducida, cada escenario parte del 30 % del saldo reconstruido en su fecha de emisión, redondeado hacia abajo. Así se obtienen stocks simulados de 50 y 60 unidades. Estos valores sustituyen el saldo de cada fecha sólo dentro de la simulación; no reemplazan las 98 unidades supuestas al inicio de la reconstrucción histórica. Se excluyen otras compras en tránsito y se mantienen constantes la fecha y el stock inicial al comparar reglas. Estas condiciones permiten aislar el efecto de la cantidad solicitada desde su llegada.
+
+La regla no incorpora costos, lotes mínimos ni una reserva calibrada. Su finalidad es examinar la cobertura y el inventario remanente bajo condiciones explícitas, sin determinar una política óptima. Las ventas posteriores se utilizan para evaluar el escenario y nunca para fijar retrospectivamente la compra.
+
+@chapter 7. Descripción de los datos
+
+Se utilizan dos archivos internos de Noirpress. La exportación de órdenes contiene identificadores, fechas, canal, medio de pago, importe, costos, comisiones, neto y cuotas (Noirpress, 2026b). La planilla de control registra recepciones por fecha, color, unidades y costo (Noirpress, 2026a). Las hojas sin movimientos verificables no se interpretan como evidencia de ventas o existencias nulas.
+
+El período abarca 179 días, del 3 de enero al 30 de junio de 2026. Cada orden se identifica mediante la combinación de canal y número. Los originales se conservan intactos; las exclusiones y transformaciones se aplican sobre copias y quedan asociadas con los registros de origen.
+
+@section 7.1 Registros de órdenes y recepciones
+
+La exportación de órdenes constituye la fuente principal del historial de ventas. La planilla de recepciones aporta las entradas de mercadería utilizadas en la reconstrucción del inventario. Ambas fuentes son registros internos de Noirpress.
+
+La base resultante conserva 391 pedidos y genera 405 unidades estimadas en 179 fechas. Los pedidos se observan directamente; las unidades se reconstruyen a partir de importes. Las recepciones documentadas y los saldos calculados se mantienen diferenciados para evitar presentar una reconstrucción contable como inventario físico.
+
+@chapter 8. Resultados
+
+@section 8.1 Comportamiento de la serie depurada
+
+La base analítica contiene 391 pedidos y 405 unidades estimadas. La diferencia entre ambas magnitudes proviene de las órdenes cuyo importe produce una estimación superior a una unidad. La depuración retira 18 registros de la fuente, sin eliminar los picos de venta de los pedidos conservados. No se detectan claves duplicadas en el conjunto utilizado.
+
+La Tabla 2 muestra un cambio de escala durante el semestre. Enero registra 15 pedidos y concentra 17 de los 34 días sin actividad. Entre febrero y abril, las unidades medias diarias se sitúan entre 2,04 y 2,32; en mayo y junio alcanzan 3,39 y 3,03. El promedio del período completo, 2,26, resume etapas distintas y no representa por sí solo el ritmo del último tramo.
+
+@table 2
+
+@figure 3
+
+La serie combina un nivel reciente más alto con aumentos breves y pronunciados. La media de los 28 días anteriores suaviza esas variaciones, pero responde con retraso cuando cambia el nivel. Esta lectura anticipa una dificultad del pronóstico: decidir cuánto del aumento reciente continuará y cuánto corresponde a un episodio transitorio.
+
+Los días sin pedidos se distribuyen de manera desigual. Desde febrero, la actividad es más continua que en enero, aunque subsisten jornadas sin registros. El análisis conserva esos ceros dentro del calendario observado. Su interpretación comercial depende de la cobertura y disponibilidad de los canales descritas en la metodología.
+
+@section 8.2 Canales y concentración comercial
+
+TiendaNube aporta 214 pedidos y Mercado Libre, 177: el 54,7 % y el 45,3 % del total. La participación cambia a lo largo de la muestra. TiendaNube representa un tercio de los pedidos de febrero y aproximadamente tres cuartas partes de los de mayo. Por lo tanto, la evolución agregada combina comportamientos de canal que no son constantes.
+
+@figure 4
+
+La figura presenta unidades estimadas por canal, mientras que las participaciones anteriores se calculan sobre pedidos observados. La ausencia de ventas registradas en Mercado Libre después del 19 de junio limita la interpretación del final del semestre: el descenso de actividad registrado no permite identificar por sí solo una caída de demanda.
+
+El máximo es de 22 unidades estimadas el 11 de mayo, seguido por 17 el día 12 y diez el día 13. La ventana analítica del 11 al 17 de mayo acumula 59 unidades y la del 14 al 17 de junio, 33. En conjunto, esas once fechas reúnen el 22,7 % del total del semestre. Fuera de ambas ventanas, la media diaria es 1,86, frente a 8,43 y 8,25 dentro de ellas.
+
+@figure 5
+
+Los diez días de mayor volumen concentran 100 unidades, el 24,7 % del total. La concentración indica que pocos días tienen un peso importante en las necesidades de cobertura. No implica que esos días deban eliminarse como errores: forman parte del comportamiento comercial que el procedimiento debe poder describir.
+
+Las ventanas se delimitaron al examinar las ventas. No existe una serie de inversión publicitaria, promociones o disponibilidad que permita aislar la causa de los picos. En consecuencia, las diferencias describen una asociación temporal y no un efecto causal ni un multiplicador reutilizable para otra campaña.
+
+@section 8.3 Patrón semanal y estabilidad
+
+El perfil por día de la semana varía al comparar períodos y al excluir las ventanas comerciales. Los promedios más altos coinciden parcialmente con fechas de picos, de modo que una media global elevada no alcanza para identificar una estacionalidad estable.
+
+@figure 6
+
+La autocorrelación de la serie a siete días es 0,026, lo que indica una asociación lineal débil a ese rezago. La contribución del calendario al pronóstico debe evaluarse mediante la comparación de modelos; este valor aislado no permite descartarla.
+
+Los modelos ensayados incluyen configuraciones con calendario o componente semanal. El estudio compara esas especificaciones completas, sin aislar mediante un experimento separado cuánto aporta cada componente. Por ello, los resultados posteriores no se atribuyen exclusivamente a la estacionalidad.
+
+@section 8.4 Comparación de pronósticos
+
+La Tabla 3 compara los nueve métodos con los mismos orígenes y horizontes. Cada error diario se expresa en unidades por día; cada error acumulado, en unidades por ventana de 30 días. La diferencia de escala impide comparar directamente los valores de ambas columnas como si representaran una misma tarea.
+
+@table 3
+
+En validación, la mediana de 28 días obtiene el menor MAE para ambos horizontes: 1,04 unidades diarias y 5,7 acumuladas. La aplicación de la regla de selección conduce, por tanto, a ese método. El comportamiento observado después es distinto: SARIMAX registra el menor error diario de prueba y la media de 28 días, el menor error acumulado.
+
+@figure 7
+
+En prueba diaria, SARIMAX alcanza un MAE de 2,27 unidades y TimesFM, 2,37. La media de siete días registra 2,94. El WAPE de SARIMAX es del 67,4 %, por lo que incluso el mejor resultado diario conserva un error considerable respecto del volumen atendido en ese tramo.
+
+@figure 8
+
+La comparación de trayectorias muestra que los métodos suavizan o reaccionan de manera diferente ante los aumentos de actividad. El error agregado combina días ordinarios con episodios mucho más difíciles. No alcanza con que una curva acompañe el nivel general: para la reposición importa cuánto volumen queda subestimado durante la espera.
+
+En el total de 30 días, la media de 28 días obtiene un MAE de 23,6, frente a 25,4 de la mediana, 28,9 de SARIMAX y 35,0 de TimesFM. Su error es un 18,4 % menor que el de SARIMAX en estas ventanas. La media de siete días alcanza 63,4 unidades, afectada por la prolongación de niveles recientes que incluyen picos.
+
+@figure 9
+
+La media de 28 días obtuvo el menor error acumulado de prueba, mientras que la selección basada en validación favoreció a la mediana. Esta diferencia muestra que la clasificación de los métodos cambió entre tramos. Como las alternativas se formularon sobre un período previamente explorado, los resultados requieren una evaluación con datos nuevos antes de utilizarlos como criterio de selección operativo.
+
+Los ajustes estadísticos informaron convergencia en todos los orígenes evaluados. Esto indica que el procedimiento de estimación alcanzó su criterio numérico; no demuestra por sí solo que la especificación represente adecuadamente la demanda. La pertinencia se juzga junto con los errores y sus condiciones de evaluación.
+
+@section 8.5 Sesgo y concentración del error
+
+El sesgo permite distinguir errores por exceso y por defecto. En el horizonte de 30 días, SARIMAX subestima en promedio 25,3 unidades por ventana y TimesFM, 33,7. La mediana de 28 días también subestima, mientras que la media de 28 días sobreestima en promedio 9,0 unidades.
+
+@figure 10
+
+Esta diferencia importa para interpretar la cobertura. Dos métodos con un MAE cercano pueden conducir a decisiones distintas si uno tiende a quedarse corto y el otro a excederse. Sin costos de inventario y faltantes no es posible convertir esa diferencia en una preferencia económica definitiva.
+
+Las once fechas de las ventanas comerciales concentran el 46,5 % del error absoluto diario de SARIMAX y el 48,4 % del de TimesFM. Representan aproximadamente una quinta parte de los 54 días de prueba. La dificultad se concentra, por tanto, en fechas relevantes para el abastecimiento.
+
+El intervalo diario entre los percentiles 10 y 90 de TimesFM tiene una cobertura nominal del 80 %. En la prueba incluye 37 de 54 observaciones, equivalentes al 68,5 %, con un ancho medio de 5,39 unidades. En esta muestra, la cobertura resulta inferior a la nominal. El intervalo no se interpreta como garantía de atención de demanda ni se traslada automáticamente a un stock de seguridad.
+
+Los resultados acumulados se apoyan en 25 ventanas de prueba superpuestas. Una misma fecha influye en numerosas ventanas, de modo que no se dispone de 25 meses independientes para evaluar estabilidad. Las diferencias se reportan como magnitudes observadas, sin presentar un contraste de superioridad general de los métodos.
+
+@section 8.6 Saldo reconstruido y disponibilidad inicial
+
+Con el inventario inicial supuesto de 98 unidades, las 420 recibidas durante el período y las 405 unidades estimadas vendidas, el saldo al 30 de junio es de 113. El mínimo de la trayectoria es 68, registrado el 25 de mayo, dos días antes de una recepción de 144 unidades.
+
+@formula Saldo al 30 de junio = 98 + 420 − 405 = 113 unidades
+
+@figure 11
+
+El diagnóstico cambia al modificar la existencia inicial. Sin unidades al inicio, el saldo contable alcanza un mínimo de −30; con 25 unidades, llega a −5. Se requieren al menos 30 unidades iniciales para que todos los cierres diarios de esta reconstrucción sean no negativos.
+
+@table 4
+
+Un saldo negativo identifica una incompatibilidad entre la existencia supuesta y los movimientos registrados. Puede relacionarse con ventas previas, recepciones omitidas, errores de estimación u otros movimientos. No demuestra por sí solo un faltante físico ni cuantifica compras que no pudieron concretarse.
+
+Del mismo modo, que la trayectoria con 98 unidades se mantenga positiva no acredita la ausencia de quiebres reales. La agregación puede ocultar diferencias por color, ubicación o canal, y no informa la disponibilidad intradía. Esta reconstrucción sirve para evaluar la sensibilidad de una interpretación, no para reemplazar el inventario físico.
+
+@section 8.7 Reposición con fechas de llegada explícitas
+
+El primer escenario emite la compra al cierre del 27 de abril y la recibe al comienzo del 27 de mayo. Parte de 50 unidades y mantiene constantes esos datos para las tres reglas. La media de siete días solicita 130 unidades; la media de 28 días, 85; y la mediana de 28 días, 70.
+
+@table 5
+
+Las tres reglas acumulan 50 unidades de faltante simulado antes de la llegada. Después de recibir la compra, los faltantes son cero, ocho y 23, respectivamente. La mayor cantidad mejora la atención posterior, pero también eleva el inventario medio. El ejemplo muestra el intercambio entre cobertura y existencias sin asignarle un costo monetario.
+
+@figure 12
+
+En el segundo escenario, emitido el 1 de junio con 60 unidades iniciales, la llegada ocurre el 1 de julio. Las reglas solicitan 18, 155 y 120 unidades. Hasta el 30 de junio, las tres alternativas tienen la misma trayectoria y acumulan 30 unidades de faltante simulado: ninguna compra ha ingresado todavía. No se evalúa su efecto posterior porque no existen ventas observadas de julio.
+
+El primer escenario muestra que una compra emitida antes de un pico puede llegar después de él: la emisión ocurre el 27 de abril, el máximo de ventas el 11 de mayo y la recepción el 27 de mayo. Para disponer de producto el 11 de mayo, una recepción situada 30 días después de la fecha de emisión exigiría emitir la compra el 11 de abril, bajo la convención adoptada. Esta relación entre fechas no sustituye el análisis de la cantidad necesaria ni del inventario disponible durante la espera.
+
+Estos ejercicios excluyen otras recepciones para estudiar una decisión aislada. Sus faltantes pertenecen a escenarios hipotéticos y no se presentan como pérdidas reales de Noirpress. Una política de compras sucesivas también debería incorporar pedidos en tránsito, compromisos, lotes mínimos y costos.
+
+@section 8.8 Síntesis de los resultados
+
+Los resultados responden a las tres hipótesis dentro del alcance del caso. H1 recibe respaldo porque varios métodos presentan menor MAE que la media de siete días en ambos horizontes de prueba. H2 encuentra apoyo en la competitividad de las referencias de 28 días. H3 queda ilustrada por los escenarios: la cantidad pedida actúa desde su llegada. Este último resultado es una consecuencia de la mecánica del modelo de inventario, no una comprobación empírica del efecto de modificar plazos reales.
+
+@table 6
+
+La comparación muestra que la precisión diaria, la estimación del volumen acumulado y la cobertura de inventario son criterios distintos. El método con menor error diario puede no ser el mejor para el horizonte de reposición. A su vez, la cantidad comprada debe evaluarse junto con la fecha de recepción y las existencias disponibles durante la espera.
+
+@chapter 9. Implementación del procedimiento
+
+Se implementó un procedimiento de análisis que integra la depuración de registros, la estimación de cantidades, el cálculo de pronósticos y la simulación de compras. Los programas generaron las tablas y figuras presentadas en este trabajo. La evaluación se realizó sobre datos históricos; la aplicación a decisiones reales de compra queda planteada como una etapa posterior.
+
+El procesamiento utiliza Python, pandas, NumPy, openpyxl, statsmodels (statsmodels, s. f.) y Matplotlib. Las predicciones conservan origen, fecha objetivo, método, horizonte y observación para recalcular las métricas sin confundir etapas. El Anexo A detalla la trazabilidad y las versiones utilizadas.
+
+Se controlan claves únicas, fechas válidas, importes finitos y totales. Cada objetivo debe ser posterior al origen y las comparaciones usan las mismas fechas. En inventario se comprueba la conservación de unidades entre existencias, recepciones, ventas atendidas y faltantes; ninguna recepción está disponible antes de su fecha.
+
+La autorización de Ignacio Giordano, propietario de Noirpress, para utilizar los registros y el nombre comercial fue informada para este estudio. Las fuentes analizadas no incluyen una constancia documental de esa autorización. Se utilizaron identificadores de orden y canal, sin nombres, documentos ni datos de contacto de clientes, y se conservaron los archivos originales.
+
+@chapter 10. Discusión
+
+La elección del método depende del horizonte y del momento en que se lo selecciona. La mediana de 28 días fue seleccionada mediante validación; los mejores resultados de prueba correspondieron a SARIMAX en el horizonte diario y a la media de 28 días en el acumulado. Elegir retrospectivamente al ganador de prueba como si hubiera sido conocido antes de ese tramo confundiría evaluación y selección.
+
+Las referencias simples resultaron competitivas frente a los modelos de mayor complejidad. En este caso, la incorporación de métodos más complejos no aseguró el menor error acumulado. Su conveniencia debe evaluarse para cada horizonte y con los datos disponibles, tal como se plantea en los antecedentes de pronóstico.
+
+La concentración de ventas en pocos días y las diferencias entre canales condicionan la interpretación del error. La falta de observaciones de disponibilidad impide separar con certeza una caída de demanda de una restricción de venta. Por eso, las predicciones deben interpretarse como estimaciones de la serie registrada y reconstruida, no como mediciones de demanda potencial no atendida.
+
+En los escenarios de reposición, el momento de recepción delimita el efecto de la cantidad comprada. El faltante anterior a la llegada es compartido por las reglas comparadas porque ninguna dispone todavía de las unidades pedidas. Esta relación explica por qué una mejora en precisión no basta para demostrar una mejora comercial: también deben observarse la posición de inventario, los plazos y las restricciones de compra.
+
+@chapter 11. Conclusiones
+
+El análisis de Noirpress permitió construir una serie diaria de ventas estimadas, comparar métodos de pronóstico y evaluar escenarios de reposición sobre una misma base. La integración de estas etapas permitió examinar cómo las limitaciones de los registros y el plazo de abastecimiento condicionan las decisiones de compra.
+
+La comparación no identifica un método superior para todas las tareas. La mediana de 28 días obtiene el menor MAE de validación en ambos horizontes, mientras que la prueba favorece a SARIMAX para el día siguiente y a la media de 28 días para el total acumulado. El resultado respalda la inclusión de referencias simples y obliga a justificar la complejidad con evidencia específica del horizonte.
+
+Para Noirpress, el horizonte de 30 días se vincula directamente con la espera habitual de una compra. Sin embargo, el pronóstico adquiere sentido operativo cuando se combina con existencias, unidades en tránsito y compromisos de entrega. Los escenarios muestran que la oportunidad de llegada condiciona qué ventas puede atender la compra, independientemente de que la cantidad solicitada sea mayor.
+
+El trabajo deja una base depurada de 391 pedidos y 405 unidades estimadas, junto con los programas y resultados necesarios para reproducir la comparación. Su uso posterior requiere mejorar el registro de cantidades y existencias y evaluar los pronósticos con ventas nuevas. Estas condiciones permitirían estudiar si el procedimiento mejora las decisiones de reposición en la operación del negocio.
+
+@chapter 12. Limitaciones y trabajo futuro
+
+@section 12.1 Limitaciones
+
+El alcance se limita a 179 días y a cantidades reconstruidas por importe. La disponibilidad inicial no proviene de un conteo físico y el plazo de 30 días se fija a partir de la demora habitual informada. Tampoco se dispone de evidencia suficiente para separar ausencia de demanda y falta de disponibilidad en los días sin ventas de Mercado Libre.
+
+La evaluación utiliza un período previamente conocido y ventanas acumuladas superpuestas. Por ello, la estabilidad del ranking y la eficacia de una política aplicada no quedan demostradas. Los escenarios permiten comprender consecuencias de decisiones bajo condiciones definidas; no acreditan reducción de quiebres reales, ventas recuperadas ni rentabilidad adicional.
+
+@section 12.2 Trabajo futuro
+
+La continuidad operativa requiere cantidades por producto, estado de las órdenes, conteos físicos y fechas de emisión y recepción de compras. También debe registrar las unidades en tránsito y comprometidas. Los campos desconocidos se conservan vacíos; no se convierten automáticamente en cero.
+
+Una evaluación con datos nuevos debe fijar de antemano el método y la regla de selección, guardar las predicciones antes de observar las ventas y documentar cambios posteriores como nuevas versiones. Así podrá diferenciarse la precisión retrospectiva medida en esta tesina del efecto real de utilizar el procedimiento en compras futuras.
+
+@chapter 13. Recursos disponibles
+
+El material complementario reúne las planillas originales, los programas de procesamiento, las predicciones, las métricas y los escenarios de inventario. La ubicación de estos archivos y las versiones utilizadas se detallan en el Anexo A.
+
+El archivo LEEME.txt describe las dependencias y el orden de ejecución de los programas. Los archivos se conservan localmente. Este trabajo no incluye la publicación abierta de los registros comerciales.
+
+@chapter 14. Impacto esperado
+
+La propuesta es utilizar una referencia de ventas acumuladas como parte de una revisión de reposición, junto con el calendario comercial y la posición de inventario. La media y la mediana de 28 días ofrecen reglas transparentes para ese seguimiento. Sus resultados retrospectivos no autorizan a automatizar compras sin observar el desempeño futuro y las restricciones reales del negocio.
+
+Se espera que el procedimiento facilite revisiones de compra documentadas y comparables en el tiempo. Su utilidad potencial reside en explicitar qué ventas se esperan durante la demora de abastecimiento, qué existencias y recepciones pueden cubrirlas y qué supuestos sostienen la decisión. Ese impacto debe evaluarse con datos nuevos; no se cuantifican ahorros, ventas recuperadas ni reducciones de quiebres reales.
+
+@chapter 15. Referencias
+
+@bibliography
+
+@chapter 16. Anexos
+
+@section Anexo A. Reproducibilidad y métricas
+
+@section A.1 Trazabilidad de datos y cálculos
+
+La reproducción comienza en los archivos originales de la carpeta fuentes/. La depuración conserva, por separado, las órdenes retenidas y las excluidas, con el motivo asociado a cada identificador. La base analítica reúne 391 pedidos y su serie diaria contiene 179 fechas y 405 unidades estimadas. Los controles de totales permiten verificar que las tablas y los gráficos utilicen esa misma base.
+
+La base depurada se conserva en resultados_noirpress/cierre/ y se reproduce con scripts/cierre_noirpress.py. La evaluación se ejecuta mediante scripts/evaluacion_final_noirpress.py y guarda sus salidas en resultados_noirpress/evaluacion_final/. El manifiesto resumen_final.json registra las versiones y las huellas de entrada.
+
+Los archivos de resultados incluyen las predicciones por origen, las métricas por tramo y horizonte, las recepciones utilizadas y las trayectorias de inventario. Los manifiestos registran las entradas, las versiones de los programas y las huellas digitales que permiten detectar cambios en los archivos. La integridad de esos archivos no garantiza que los registros abarquen todos los movimientos comerciales.
+
+Los registros de predicción conservan la fecha de origen, el método, la fecha objetivo y el horizonte. La observación posterior permite medir el error. Los controles temporales verifican que la reconstrucción de cantidades utilice sólo información previa; el orden cronológico de los pronósticos y las comprobaciones de conservación del inventario completan la revisión de consistencia.
+
+La ejecución utiliza Python 3.12.8, NumPy 2.3.5, pandas 3.0.1, SciPy 1.18.1, statsmodels 0.15.0, timesfm 3.0.2 y PyTorch 2.14.0. TimesFM se ejecuta en CPU con la revisión fija 43046b85ec22d584a13f8098c2ed39c889e129c2, cargada de la caché local.
+
+@section A.2 Definición de las métricas
+
+Sea y la observación, p el pronóstico y n el número de casos evaluados. El error se define como p − y: un valor negativo indica subestimación y uno positivo, sobreestimación.
+
+@table 7
+
+El WAPE sólo se calcula si el volumen observado total es positivo. No es el promedio de porcentajes de error diarios. El sesgo puede ser pequeño aunque existan errores absolutos grandes, porque excesos y déficits se compensan; por eso se interpreta junto con MAE y RMSE.
+
+Para el horizonte de 30 días, y y p representan los totales de cada ventana. El RMSE contiene tanto dispersión como sesgo y no equivale necesariamente a la desviación estándar de errores centrados. Multiplicarlo por un coeficiente de una distribución normal no garantiza, por sí solo, un nivel de servicio de inventario.
+
+La cobertura de un intervalo es la proporción de observaciones que quedan dentro de sus límites. Debe interpretarse junto con su amplitud y para el horizonte evaluado. Un intervalo muy amplio puede aumentar la cobertura sin mejorar la precisión de la estimación central.

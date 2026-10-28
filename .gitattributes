@@ -1,0 +1,6 @@
+# Conservar los bytes originales para verificar los SHA-256 del manifiesto.
+* -text
+*.pdf binary
+*.xlsx binary
+*.png binary
+*.jpg binary

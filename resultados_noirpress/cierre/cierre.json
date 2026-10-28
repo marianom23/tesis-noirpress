@@ -1,0 +1,28 @@
+{
+  "fecha_cierre": "2026-10-20",
+  "ordenes_fuente": 409,
+  "canceladas_importe_cero": 10,
+  "excluidas_costo_bajo": 8,
+  "pedidos_cierre": 391,
+  "unidades_estimadas_cierre": 405,
+  "dias": 179,
+  "pedidos_por_canal": {
+    "Mercado Libre": 177,
+    "TiendaNube": 214
+  },
+  "unidades_por_mes": {
+    "2026-01": 15,
+    "2026-02": 57,
+    "2026-03": 72,
+    "2026-04": 65,
+    "2026-05": 105,
+    "2026-06": 91
+  },
+  "fuente_sha256": "6c80fca9b3adb68ce3f4f1a51f512747d57b5d963634e630f288996326701f13",
+  "base_evaluacion_anterior": {
+    "pedidos": 399,
+    "unidades_estimadas": 413
+  },
+  "modelos_reestimados_en_cierre": false,
+  "criterio": "Cancelaciones informadas y exclusión de ocho órdenes de costo bajo indicada por los autores; no se infiere producto."
+}

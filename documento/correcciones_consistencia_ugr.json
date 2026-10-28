@@ -1,0 +1,42 @@
+[
+  {
+    "antes": "La fuente contiene 409 órdenes entre el 3 de enero y el 30 de junio. Tras la depuración, se conservan 391 pedidos: 214 de TiendaNube y 177 de Mercado Libre. La reconstrucción produce 405 unidades estimadas distribuidas en 179 días. La palabra unidades designa, en adelante, esa aproximación, salvo indicación expresa; no representa un conteo físico de cafeteras.",
+    "despues": "La fuente contiene 409 órdenes entre el 3 de enero y el 30 de junio. Tras la depuración, se conservan 391 pedidos: 214 de TiendaNube y 177 de Mercado Libre. La reconstrucción produce 405 unidades estimadas distribuidas en 179 días. Las cantidades vendidas son estimaciones obtenidas de los importes; las cantidades recibidas provienen de la planilla de ingresos. Los saldos de inventario combinan ambas magnitudes y dependen de la existencia inicial supuesta.",
+    "motivo": "Distinguir unidades vendidas estimadas, recepciones registradas y saldos reconstruidos; la definición anterior de unidades era demasiado general."
+  },
+  {
+    "antes": "@item 1. Reconstruir una base trazable, distinguiendo pedidos observados, unidades estimadas y movimientos de inventario documentados.\n@item 2. Caracterizar la evolución de las ventas, su concentración temporal y la participación de los canales.\n@item 3. Comparar referencias simples y modelos de distinta complejidad con los mismos datos, fechas y horizontes.\n@item 4. Examinar la magnitud y dirección de los errores, y su relación con los períodos de mayor actividad.\n@item 5. Analizar cómo la fecha de llegada y la cantidad de una compra modifican la cobertura en escenarios de reposición.",
+    "despues": "@item 1. Reconstruir una base trazable, distinguiendo pedidos observados, unidades estimadas y movimientos de inventario documentados.\n@item 2. Caracterizar la evolución de las ventas, su concentración temporal y la participación de los canales.\n@item 3. Comparar referencias simples y modelos de distinta complejidad con los mismos datos, fechas y horizontes.\n@item 4. Examinar la magnitud y dirección de los errores, y su relación con los períodos de mayor actividad.\n@item 5. Comparar cantidades de compra y cobertura de inventario en escenarios con fechas de emisión y recepción definidas, distinguiendo los faltantes anteriores y posteriores a la llegada.",
+    "motivo": "Los escenarios comparan cantidades manteniendo fijo el plazo; no se ensaya el efecto de variar el plazo de entrega."
+  },
+  {
+    "antes": "Los escenarios fijan un plazo de 30 días. Una compra emitida al cierre de una fecha llega al comienzo del día situado 30 días después. Hasta la recepción, las ventas de referencia se atienden con el inventario disponible. Si lo superan, la diferencia constituye un faltante simulado y el stock permanece en cero.",
+    "despues": "Los escenarios fijan la recepción 30 días de calendario después de la fecha de emisión. La compra se emite al cierre del día y se incorpora al stock al comienzo de la fecha de llegada. Esta convención determina qué días se clasifican como anteriores a la recepción. Hasta esa fecha, las ventas de referencia se atienden con el inventario disponible; el exceso constituye un faltante simulado y el stock permanece en cero.",
+    "motivo": "El código usa llegada = emisión + 30 días, recepción antes de atender ventas del día de llegada."
+  },
+  {
+    "antes": "La regla de compra busca cubrir 60 días: los 30 de espera y los 30 posteriores. La tasa diaria se calcula con la media de siete días, la media de 28 días o la mediana de 28 días:",
+    "despues": "La regla de compra utiliza un horizonte de 60 días contados desde el día siguiente a la emisión. Con la convención adoptada, el escenario completo comprende 29 días anteriores a la llegada y 31 días desde la recepción, incluida esa fecha. Por lo tanto, el horizonte no se divide en dos bloques de 30 días de ventas. La tasa diaria se calcula con la media de siete días, la media de 28 días o la mediana de 28 días:",
+    "motivo": "El escenario completo va del 28 de abril al 26 de junio: 29 días hasta el 26 de mayo y 31 desde el 27 de mayo."
+  },
+  {
+    "antes": "Para representar disponibilidad reducida, cada escenario parte del 30 % del saldo reconstruido en su fecha de emisión, redondeado hacia abajo. Se excluyen otras compras en tránsito y se mantienen constantes la fecha y el stock inicial al comparar reglas. Estas condiciones permiten aislar el efecto de la cantidad solicitada desde su llegada.",
+    "despues": "Para representar disponibilidad reducida, cada escenario parte del 30 % del saldo reconstruido en su fecha de emisión, redondeado hacia abajo. Así se obtienen stocks simulados de 50 y 60 unidades. Estos valores sustituyen el saldo de cada fecha sólo dentro de la simulación; no reemplazan las 98 unidades supuestas al inicio de la reconstrucción histórica. Se excluyen otras compras en tránsito y se mantienen constantes la fecha y el stock inicial al comparar reglas. Estas condiciones permiten aislar el efecto de la cantidad solicitada desde su llegada.",
+    "motivo": "Los saldos de emisión son 168 y 203; floor(0,30*saldo) produce 50 y 60. Se distinguen los dos ejercicios de inventario."
+  },
+  {
+    "antes": "La lectura operativa es que una compra emitida después de un aumento de ventas puede llegar cuando la necesidad ya ocurrió. Con una demora fija de 30 días, disponer de producto el 11 de mayo exigiría emitir la compra el 11 de abril, bajo la convención de fechas utilizada. La cantidad suficiente y el inventario durante la espera continúan siendo necesarios.",
+    "despues": "El primer escenario muestra que una compra emitida antes de un pico puede llegar después de él: la emisión ocurre el 27 de abril, el máximo de ventas el 11 de mayo y la recepción el 27 de mayo. Para disponer de producto el 11 de mayo, una recepción situada 30 días después de la fecha de emisión exigiría emitir la compra el 11 de abril, bajo la convención adoptada. Esta relación entre fechas no sustituye el análisis de la cantidad necesaria ni del inventario disponible durante la espera.",
+    "motivo": "La compra ilustrada se emite antes del pico, no después. La interpretación debe describir el escenario efectivamente evaluado."
+  },
+  {
+    "antes": "Los resultados responden a las tres hipótesis dentro del alcance del caso. H1 recibe respaldo porque varios métodos superan a la media de siete días en ambos horizontes de prueba. H2 encuentra apoyo en la competitividad de las referencias de 28 días. H3 se verifica por la mecánica temporal de los escenarios: la cantidad pedida actúa desde su llegada.",
+    "despues": "Los resultados responden a las tres hipótesis dentro del alcance del caso. H1 recibe respaldo porque varios métodos presentan menor MAE que la media de siete días en ambos horizontes de prueba. H2 encuentra apoyo en la competitividad de las referencias de 28 días. H3 queda ilustrada por los escenarios: la cantidad pedida actúa desde su llegada. Este último resultado es una consecuencia de la mecánica del modelo de inventario, no una comprobación empírica del efecto de modificar plazos reales.",
+    "motivo": "H3 es una condición del modelo, no evidencia causal obtenida variando plazos observados."
+  },
+  {
+    "antes": "Se plantean tres hipótesis orientadoras. H1: al menos uno de los métodos evaluados reduce el error de la media de siete días en los dos horizontes de prueba. H2: una mayor complejidad no garantiza un menor error acumulado de 30 días frente a referencias simples. H3: aumentar una compra que llega después de un pico no evita los faltantes anteriores a su recepción.",
+    "despues": "Se plantean tres hipótesis orientadoras. H1: al menos uno de los métodos evaluados reduce el MAE de la media de siete días en los dos horizontes de prueba. H2: una mayor complejidad no garantiza un menor MAE acumulado de 30 días frente a referencias simples, dentro del conjunto comparado. H3: aumentar una compra que llega después de un pico no evita los faltantes anteriores a su recepción.",
+    "motivo": "Explicitar la métrica usada para contrastar H1 y H2 y acotar la afirmación al conjunto estudiado."
+  }
+]
