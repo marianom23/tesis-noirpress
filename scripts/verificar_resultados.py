@@ -11,7 +11,15 @@ R = ROOT / 'resultados_noirpress/evaluacion_final'
 
 def verify():
     manifest = json.loads((R / 'resumen_final.json').read_text(encoding='utf-8'))
-    for path, expected in manifest['hashes'].items():
+    expected_hashes = {path.replace('\\', '/'): value for path, value in manifest['hashes'].items()}
+    distribution = json.loads((R / 'distribucion_codigo.json').read_text(encoding='utf-8'))
+    for path, entry in distribution['archivos'].items():
+        assert path in {'scripts/auditoria_eda_noirpress.py', 'scripts/modelos_noirpress_avanzados.py',
+                        'scripts/limpiar_noirpress.py', 'scripts/evaluacion_final_noirpress.py'}, path
+        if path in expected_hashes:
+            assert expected_hashes[path] in (entry['sha256_original'], entry['sha256_distribuido']), path
+        expected_hashes[path] = entry['sha256_distribuido']
+    for path, expected in expected_hashes.items():
         assert hashlib.sha256((ROOT / path).read_bytes()).hexdigest() == expected, path
     raw = pd.read_excel(ROOT / 'fuentes/ultimas_ordenes_2026-07-06.xlsx', sheet_name='Ordenes')
     orders = pd.read_csv(ROOT / 'resultados_noirpress/cierre/ordenes_cierre.csv', parse_dates=['Fecha'])

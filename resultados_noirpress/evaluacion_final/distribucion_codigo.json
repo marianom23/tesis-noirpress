@@ -1,0 +1,45 @@
+{
+  "fecha": "2026-10-28",
+  "commit_original": "ce98a96add9d02429cbf300b3758325c76092060",
+  "alcance": "Se retiraron flujos e informes históricos no utilizados. Los cuerpos de las funciones de cálculo conservadas son idénticos por comparación AST. No se recalcularon predicciones ni se modificó el manifiesto de ejecución original.",
+  "archivos": {
+    "scripts/auditoria_eda_noirpress.py": {
+      "sha256_original": "06f0e78b6c332338b2a67945ccc8c386c507ee80d7b4d2e6dd70623cb9dc90ea",
+      "sha256_distribuido": "67de3e8e654b30b904d0ff12342a6017606e1fe48038672c61dac19d85757bd8",
+      "funciones_conservadas": [
+        "estimate",
+        "benchmark_forecasts",
+        "stats_row",
+        "simulate_order"
+      ],
+      "ast_funciones_sha256": "4e8b61903f7c0db23b5fc55fabe0a022ac5a4a95a47ec9a22fe2469b53ab0938"
+    },
+    "scripts/modelos_noirpress_avanzados.py": {
+      "sha256_original": "409ca0a3a9975ec6c2e2ef0008457147dcaf2ad1fab56d1c39ef8a0a5801f9e4",
+      "sha256_distribuido": "5492cd18b0bec85c26991857b48dd857faa85eeab5f5d209028057647091c5aa",
+      "funciones_conservadas": [
+        "prepare_orders",
+        "calendar",
+        "forecast_classic",
+        "load_foundation",
+        "foundation_forecasts",
+        "metric_values",
+        "save_csv"
+      ],
+      "ast_funciones_sha256": "27cd50941f697ac42b19d0f4557162c703cb20e0bef2f25de5ffc3e34a37f50f"
+    },
+    "scripts/limpiar_noirpress.py": {
+      "sha256_original": "00faa6ccc6124157c7b320b785c9517112a3261c8b79fbbd21e11e56c6dddc1b",
+      "sha256_distribuido": "7ab64946545580fb5442fd98d96da549c353f035f6ecf48f91e934700798b27f",
+      "funciones_conservadas": [
+        "leer_ingresos"
+      ],
+      "ast_funciones_sha256": "4171c85e5434faa9eca4ddb5777b75cbbe226db866be1a861f9d733501ddf305"
+    },
+    "scripts/evaluacion_final_noirpress.py": {
+      "sha256_original": "4541072d707cf0ec6c6f18496fa5c015a63ad9fa048a6ca40e8c5c27bfc1bf8d",
+      "sha256_distribuido": "76f36103174289ef2716bfd6a289a140714c7a5ebf642a8b2824057a3d302037",
+      "cambio": "Sólo la instrucción de ejecución del docstring; código ejecutable idéntico."
+    }
+  }
+}

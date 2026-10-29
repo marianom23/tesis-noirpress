@@ -38,7 +38,9 @@ python scripts/figuras_noirpress_final.py
 
 Estos comandos reemplazan las salidas de cálculo. La evaluación requiere tener previamente en la caché de Hugging Face los pesos de `google/timesfm-3.0-pytorch`, revisión `43046b85ec22d584a13f8098c2ed39c889e129c2`: el código los carga sin conexión. Los pesos no se incluyen en este repositorio y tienen condiciones de uso no comercial. Consultar su licencia antes de utilizarlos.
 
-Los módulos `limpiar_noirpress.py`, `auditoria_eda_noirpress.py` y `modelos_noirpress_avanzados.py` se conservan porque la evaluación final importa funciones de ellos. Sus flujos principales corresponden a etapas anteriores: no ejecutarlos como sustitutos de los tres comandos anteriores. El XLSX intermedio se conserva para evitar regenerarlo con criterios históricos.
+Los módulos `limpiar_noirpress.py`, `auditoria_eda_noirpress.py` y `modelos_noirpress_avanzados.py` contienen únicamente las funciones auxiliares que utiliza el procedimiento final; no son comandos de ejecución independientes. El XLSX intermedio se conserva como entrada de la depuración.
+
+`resumen_final.json` conserva el manifiesto de la ejecución original. `distribucion_codigo.json` registra por separado los hashes del código distribuido después de retirar los flujos e informes históricos no utilizados. Los cuerpos de las funciones de cálculo se conservaron sin cambios, comprobados mediante comparación de su estructura sintáctica (AST). Esta limpieza no equivale a una nueva ejecución de los modelos ni modifica las predicciones guardadas. El commit original queda identificado para consultar la evidencia anterior.
 
 ## Alcance y acceso
 

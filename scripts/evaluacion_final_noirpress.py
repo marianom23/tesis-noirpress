@@ -1,6 +1,6 @@
 """Reevaluación retrospectiva de la serie final depurada, sin modificar fuentes.
 
-Ejecutar con tmp/evaluacion_env/Scripts/python.exe scripts/evaluacion_final_noirpress.py.
+Ejecutar con python scripts/evaluacion_final_noirpress.py desde el entorno de calculo.
 Los pesos se leen exclusivamente de la caché de Hugging Face.
 """
 from __future__ import annotations
